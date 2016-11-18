@@ -2,14 +2,24 @@ var express      = require('express');
 var path         = require('path');
 var favicon      = require('serve-favicon');
 var logger       = require('morgan');
-var bodyParser   = require('body-parser');
 var debug        = require('debug')('app:http');
 var cookieParser = require('cookie-parser');
+var bodyParser   = require('body-parser');
+var session = require('express-session');
+var passport = require('passport');
+
+// load the env vars
+require('dotenv').config();
 
 // Load local libraries.
 var env      = require('./config/environment'),
-    mongoose = require('./config/database'),
-    routes   = require('./config/routes');
+    mongoose = require('./config/database')
+//    routes   = require('./config/routes'),
+
+require('./config/passport');
+
+var indexRoutes = require('./routes/index');
+var apiRoutes = require('./routes/api');
 
 // Instantiate a server application.
 var app = express();
@@ -45,9 +55,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Useful for debugging the state of requests.
 app.use(debugReq);
+app.use(session({
+//    secret: "WDIRocks!",
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Defines all of our "dynamic" routes.
-app.use('/', routes);
+app.use('/', indexRoutes);
+app.use('/api', apiRoutes);
 
 // Catches all 404 routes.
 app.use(function(req, res, next) {
