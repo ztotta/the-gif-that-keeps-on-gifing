@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- include('../partials/head') %>
+</head>
+<body>
+  <%- include('../partials/header', {subHeading: 'Take this Survey, what are you scared?'}) %>
+
+    <h1 class="jumbotron text-center">SURVEY. NOW.</h1>
+
+    <div class="row" id="main-div">
+      <div class="col-xs-6 form">
+          <div class="input-group">
+            <input type="text" id="answer01" class="form-control"
+                    placeholder="Enter answer01">
+                    <input type="text" id="answer02" class="form-control"
+                    placeholder="Enter answer02">
+                    <input type="text" id="answer03" class="form-control"
+                    placeholder="Enter answer03">
+                    <input type="text" id="answer04" class="form-control"
+                    placeholder="Enter answer04">
+                    <input type="text" id="answer05" class="form-control"
+                    placeholder="Enter answer05">
+                    <input type="text" id="answer06" class="form-control"
+                    placeholder="Enter answer06">
+                    <input type="text" id="answer07" class="form-control"
+                    placeholder="Enter answer07">
+                    <input type="text" id="answer08" class="form-control"
+                    placeholder="Enter answer08">
+                    <input type="text" id="answer09" class="form-control"
+                    placeholder="Enter answer09">
+                    <input type="text" id="answer10" class="form-control"
+                    placeholder="Enter answer10">
+            <span class="input-group-btn">
+              <button class="btn btn-success"
+                type="submit" id="submit">GIF DAT</button>
+            </span>
+          </div>
+      </div>
+    </div>
+
+  <%- include('../partials/scripts') %>
+</body>
+</html>
