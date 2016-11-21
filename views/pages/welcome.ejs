@@ -6,12 +6,24 @@
 <body>
   <%- include('../partials/header') %>
 
+  <!-- LANDING PAGE -->
   <h3>'Take this Survey. What? Are you scared?'</h3>
-    <h5 class="jumbotron text-center">SURVEY. NOW.</h5>
+  <h5>SURVEY. NOW.</h5>
 
+
+  <!-- SURVEY PAGE -->
     <div class="row" id="main-div">
       <div class="col-xs-6 form">
           <div class="input-group">
+            <label>Question Text Goes Here</label>
+            <input type="text" id="answer01" class="form-control"
+                    placeholder="Dropdown Goes Here">
+            <span class="input-group-btn">
+              <button class="btn btn-success"
+                type="submit" id="submit">GIF DAT</button>
+            </span>
+          </div>
+<!--           <div class="input-group">
             <input type="text" id="answer01" class="form-control"
                     placeholder="Enter answer01">
                     <input type="text" id="answer02" class="form-control"
@@ -36,7 +48,7 @@
               <button class="btn btn-success"
                 type="submit" id="submit">GIF DAT</button>
             </span>
-          </div>
+          </div> -->
       </div>
     </div>
   <%- include('../partials/footer') %>
