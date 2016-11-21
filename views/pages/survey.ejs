@@ -11,31 +11,29 @@
   <div class="container">
     <div class="row valign-wrapper" id="main-div">
       <div class="col s12 m9">
-        <div class="card large">
-          <div class="card-image">
+        <div class="card-panel large">
+          <div class="card-image center-align">
             <img src="images/sample-1.jpg">
             <!-- I think we should put a random gif here on each page of the survey -->
-            <span class="card-title">Question Text Goes Here</span>
           </div>
           <div class="card-content">
-            <h5>Question # Goes Here</h5>
-            <p>Question Text Goes Here</p>
+            <h5 class="question-number"></h5>
+            <p class="question-text"></p>
             <br>
-            <!-- Dropdown Trigger -->
-            <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Select One</a>
-
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-              <li><a href="#!">one</a></li>
-              <li><a href="#!">two</a></li>
-              <li><a href="#!">three</a></li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span class="input-group-btn">
-              <button class="btn btn-success"
-                type="submit" id="submit">GIF DAT</button>
-            </span>
+              <div class="input-field col s12 responses">
+              <select>
+                <option value="" disabled selected>Your Answer</option>
+                <option id="option1" value="1"></option>
+                <option id="option2" value="2"></option>
+                <option id="option3" value="3"></option>
+                <option id="option4" value="4"></option>
+                <option id="option5" value="5"></option>
+              </select>
+            </div>
+              <span class="input-group-btn">
+                <button class="btn btn-success"
+                  type="submit" id="submit">GIF DAT</button>
+              </span>
           </div>
         </div>
       </div>
