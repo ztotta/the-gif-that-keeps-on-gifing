@@ -1,18 +1,13 @@
 console.log('JS loaded!');
 
-//var i = 0;
 function renderResults(result) {
-    $("#main-div").append(`
-		<div class="results">
-			<div id="answers"><img src="${result.data[0].images.original.url}"></div>
-		</div>`)
+    $("#survey-gif").attr('src', `${result.data[0].images.original.url}`);
     console.log(result);
-//    i++;
 }
 
 var questionTexts = [
-	'1) What was...',
-	'2) What was...',
+	'What was the weather like when you were born?',
+	'How many siblings did you have?',
 	'3) What was...',
 	'4) What was...',
 	'5) What was...'
@@ -20,11 +15,11 @@ var questionTexts = [
 
 var questionAnswers = [
 	[
-		['sunny', 'sun'],
-		['Answer 2', 'val'],
-		['Answer 3', 'val'],
-		['Answer 4', 'val'],
-		['Answer 5', 'val']
+		['sunny', 'sunshine'],
+		['stormy', 'thunder+storm'],
+		['overcast', 'overcast'],
+		['cold af', 'freezing'],
+		['hot af', 'hot+weather']
 	],
 	[
 		['Answer 2.1', 'val'],
@@ -56,9 +51,12 @@ var questionAnswers = [
 	]
 ];
 
-k=0;
+var questionGifs = [
+	"http://i.giphy.com/utOBfj70LUHN6.gif"
+];
 
-function assignText() {
+k=0;
+function resetCard() {
 		$('.question-number').text('Question #' + (k+1));
 		$('.question-text').text(questionTexts[k]);
 		$('#option1').text(questionAnswers[k][0][0]).val(questionAnswers[k][0][1]);
@@ -66,49 +64,41 @@ function assignText() {
 		$('#option3').text(questionAnswers[k][2][0]).val(questionAnswers[k][2][1]);
 		$('#option4').text(questionAnswers[k][3][0]).val(questionAnswers[k][3][1]);
 		$('#option5').text(questionAnswers[k][4][0]).val(questionAnswers[k][4][1]);
-		console.log($('#option1').text());
+		$("#survey-gif").attr("src", questionGifs[k]);
 		reloadOptions();
 };
 
 $(document).ready(function() {
-	assignText();
+	resetCard();
 });
 
-var submission = [];
+var submissionText = [];
+var submissionVal = [];
 
 $('#submit').click(function () {
-	response = $('.responses option:selected').text();
-	submission.push(response);
-	console.log(submission);
+	responseText = $('.responses option:selected').text();
+	responseVal = $('.responses option:selected').val();
+	submissionText.push(responseText);
+	submissionVal.push(responseVal);
+	console.log(submissionText);
+	console.log(submissionVal);
 	k++;
 	reloadOptions();
-	assignText();
-
-//$('#submit').click(function () {
-//	var submission = [
-//        $('#answer01').val(),
-//        $('#answer02').val(),
-//        $('#answer03').val(),
-//        $('#answer04').val(),
-//        $('#answer05').val(),
-//        $('#answer06').val(),
-//        $('#answer07').val(),
-//        $('#answer08').val(),
-//        $('#answer09').val(),
-//        $('#answer10').val()
-//	];
-
-//    submission.forEach(function(answer) {
-//        console.log(answer);
-//        $.ajax({
-//        url: `http://api.giphy.com/v1/gifs/search?q=${answer}&api_key=dc6zaTOxFJmzC`,
-//        dataType: 'json',
-//        success: function(result){
-//            renderResults(result);
-//            }
-//        });
-//    })
+	resetCard();
 });
+
+function apiRequest() {
+	  submission.forEach(function(answer) {
+        console.log(answer);
+        $.ajax({
+        url: `http://api.giphy.com/v1/gifs/search?q=${answer}&api_key=dc6zaTOxFJmzC`,
+        dataType: 'json',
+        success: function(result){
+            renderResults(result);
+            }
+        });
+    })
+}
 
 //Add Dropdown functionality to the survey page
 //this does not work yet
