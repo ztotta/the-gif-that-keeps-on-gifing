@@ -26,3 +26,15 @@ img {
 .brand-logo {
   margin-left: 10px;
 }
+
+/*NAVBAR STYLING*/
+
+.nav-wrapper {
+  background-color: #f06292;
+}
+
+/*FOOTER STYLING*/
+
+footer.page-footer {
+  background-color: #f06292;
+}
