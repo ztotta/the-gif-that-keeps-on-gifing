@@ -23,6 +23,13 @@ img {
     height: 200px;
 }
 
+/*landing page image*/
+
+#landing-gif {
+  width: 480px,
+  height: 289px
+}
+
 .brand-logo {
   margin-left: 10px;
 }
@@ -31,6 +38,10 @@ img {
 
 .nav-wrapper {
   background-color: #f06292;
+}
+
+a.brand-logo {
+  font-family: 'Bungee Shade', cursive;
 }
 
 /*FOOTER STYLING*/
