@@ -14,8 +14,8 @@
     <!-- SURVEY PAGE -->
   <div class="container">
       <div class="row valign-wrapper" id="main-div">
-        <div class="col s12 m7">
-          <div class="card">
+        <div class="col s12 m9">
+          <div class="card large">
             <div class="card-image">
               <img src="images/sample-1.jpg">
               <!-- I think we should put a random gif here on each page -->
@@ -24,8 +24,16 @@
             <div class="card-content">
               <h5>Question # Goes Here</h5>
               <p>Question Text Goes Here</p>
-              <input type="text" id="answer01" class="form-control"
-              placeholder="Dropdown Goes Here">
+              <br>
+              <!-- Dropdown Trigger -->
+              <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Select One</a>
+
+              <!-- Dropdown Structure -->
+              <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li><a href="#!">three</a></li>
+              </ul>
             </div>
             <div class="card-action">
               <span class="input-group-btn">
