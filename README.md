@@ -2,10 +2,4 @@
 
 :tada:
 
-go team 
-
-Cait was here
-
 Enjoy… 
-    
-The pig says 'oink oink!'
