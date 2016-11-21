@@ -20,39 +20,39 @@ var questionTexts = [
 
 var questionAnswers = [
 	[
-		'Answer 1',
-		'Answer 2',
-		'Answer 3',
-		'Answer 4',
-		'Answer 5'
+		['sunny', 'sun'],
+		['Answer 2', 'val'],
+		['Answer 3', 'val'],
+		['Answer 4', 'val'],
+		['Answer 5', 'val']
 	],
 	[
-		'Answer 2.1',
-		'Answer 2.2',
-		'Answer 2.3',
-		'Answer 2.4',
-		'Answer 2.5'
+		['Answer 2.1', 'val'],
+		['Answer 2.2', 'val'],
+		['Answer 2.3', 'val'],
+		['Answer 2.4', 'val'],
+		['Answer 2.5', 'val']
 	],
 	[
-		'Answer 3.1',
-		'Answer 2',
-		'Answer 3',
-		'Answer 4',
-		'Answer 5'
+		['Answer 3.1','val'],
+		['Answer 2','val'],
+		['Answer 3','val'],
+		['Answer 4','val'],
+		['Answer 5','val']
 	],
 	[
-		'Answer 4.1',
-		'Answer 2',
-		'Answer 3',
-		'Answer 4',
-		'Answer 5'
+		['Answer 4.1','val'],
+		['Answer 2','val'],
+		['Answer 3','val'],
+		['Answer 4','val'],
+		['Answer 5','val']
 	],
 	[
-		'Answer 5.1',
-		'Answer 2',
-		'Answer 3',
-		'Answer 4',
-		'Answer 5'
+		['Answer 5', 'val'],
+		['Answer 2', 'val'],
+		['Answer 3', 'val'],
+		['Answer 4', 'val'],
+		['Answer 5', 'val']
 	]
 ];
 
@@ -61,8 +61,13 @@ k=0;
 function assignText() {
 		$('.question-number').text('Question #' + (k+1));
 		$('.question-text').text(questionTexts[k]);
-		$('#option1').text(questionAnswers[k][0]);
+		$('#option1').text(questionAnswers[k][0][0]).val(questionAnswers[k][0][1]);
+		$('#option2').text(questionAnswers[k][1][0]).val(questionAnswers[k][1][1]);
+		$('#option3').text(questionAnswers[k][2][0]).val(questionAnswers[k][2][1]);
+		$('#option4').text(questionAnswers[k][3][0]).val(questionAnswers[k][3][1]);
+		$('#option5').text(questionAnswers[k][4][0]).val(questionAnswers[k][4][1]);
 		console.log($('#option1').text());
+		reloadOptions();
 };
 
 $(document).ready(function() {
@@ -74,7 +79,9 @@ var submission = [];
 $('#submit').click(function () {
 	response = $('.responses option:selected').text();
 	submission.push(response);
+	console.log(submission);
 	k++;
+	reloadOptions();
 	assignText();
 
 //$('#submit').click(function () {
@@ -105,9 +112,12 @@ $('#submit').click(function () {
 
 //Add Dropdown functionality to the survey page
 //this does not work yet
-$(document).ready(function() {
+function reloadOptions() {
+	$(document).ready(function() {
     $('select').material_select();
+		$('.select-dropdown').val('Your Answer');
   });
+};
 
 
 // TIMELINE FUNCTION FOR RESULTS PAGE
