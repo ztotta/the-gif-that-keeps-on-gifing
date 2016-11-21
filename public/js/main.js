@@ -62,7 +62,6 @@ function assignText() {
 		$('.question-number').text('Question #' + (k+1));
 		$('.question-text').text(questionTexts[k]);
 		$('#option1').text(questionAnswers[k][0]);
-		console.log(questionAnswers[k][0]);
 		console.log($('#option1').text());
 };
 
