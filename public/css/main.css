@@ -6,27 +6,19 @@ body {
 
 a { color: #00B7FF; }
 
-input {
-    width: 45%;
+/*Make Footer Sticky*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.input-group {
-    margin-bottom: 10px;
-    margin: 0 auto;
-    text-align: left;
+main {
+  flex: 1 0 auto;
 }
 
+/*image placeholder*/
 img {
     width: 200px;
     height: 200px;
-}
-
-#main-div {
-    width: 80%;
-/*    text-align: center;*/
-}
-
-.results {
-    margin-bottom: 10px;
-    display: inline-block;
 }
