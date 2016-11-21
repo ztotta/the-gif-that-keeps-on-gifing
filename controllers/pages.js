@@ -7,15 +7,15 @@ var welcome = function(req, res, next) {
 };
 
 var survey = function(req, res, next) {
-	res.render('pages/survey');
+	res.render('pages/survey', { user: req.user });
 };
 
 var showResults = function(req, res, next) {
-	res.render('pages/results');
+	res.render('pages/results', { user: req.user });
 };
 
 var about = function(req, res, next) {
-	res.render('pages/about');
+	res.render('pages/about', { user: req.user });
 };
 
 module.exports = {
