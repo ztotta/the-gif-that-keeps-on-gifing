@@ -14,8 +14,13 @@ var showResults = function(req, res, next) {
 	res.render('pages/results');
 };
 
+var about = function(req, res, next) {
+	res.render('pages/about');
+};
+
 module.exports = {
   welcome: welcome,
 	survey: survey,
-	showResults: showResults
+	showResults: showResults,
+	about: about
 };
