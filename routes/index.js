@@ -10,10 +10,10 @@ var pagesController = require('../controllers/pages');
 
 // root path:
 router.get('/', pagesController.welcome);
-
+router.get('/survey', pagesController.survey);
+router.get('/results', pagesController.showResults);
 
 //----------------------//
-
 
 // The root route renders our only view
 router.get('/', function(req, res) {

@@ -66,6 +66,8 @@ app.use(passport.session());
 
 // Defines all of our "dynamic" routes.
 app.use('/', indexRoutes);
+app.use('/survey', indexRoutes);
+app.use('/results', indexRoutes);
 app.use('/api', apiRoutes);
 
 // Catches all 404 routes.
