@@ -12,6 +12,7 @@ var pagesController = require('../controllers/pages');
 router.get('/', pagesController.welcome);
 router.get('/survey', pagesController.survey);
 router.get('/results', pagesController.showResults);
+router.get('/about', pagesController.about);
 
 //----------------------//
 
