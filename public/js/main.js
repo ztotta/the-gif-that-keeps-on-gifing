@@ -100,7 +100,7 @@ function resetCard() {
 		$('#option4').text(questionAnswers[k][3][0]).val(questionAnswers[k][3][1]);
 		$('#option5').text(questionAnswers[k][4][0]).val(questionAnswers[k][4][1]);
 		$("#survey-gif").attr("src", questionGifs[k]);
-		if (k >= 7) $('#submit').text('Submit');
+		if (k >= 2) $('#submit').text('Submit');
 		reloadOptions();
 };
 
@@ -108,10 +108,10 @@ $(document).ready(function() {
 	resetCard();
 });
 
-var submissionText = [];
-var submissionVal = [];
+var surveySelections = [];
+var surveySearchValues = [];
 
-var friendshipData = {sT: submissionText, sV: submissionVal };
+var submissionData = {sS: surveySelections, sSV: surveySearchValues};
 
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') { 
@@ -119,10 +119,10 @@ $('#submit').click(function () {
 		$.ajax({
 			url: "/results", //+this.database,
 			type: "PUT",
-			data: friendshipData,
+			data: submissionData,
 			dataType: 'json'
 		}).then(function(data) {
-			console.log(data);
+			document.location.href = '/results';
 		}, function(err) {
 			console.error(err);
 		});
@@ -130,10 +130,8 @@ $('#submit').click(function () {
 	else {
 		responseText = $('.responses option:selected').text();
 		responseVal = $('.responses option:selected').val();
-		submissionText.push(responseText);
-		submissionVal.push(responseVal);
-//		console.log(submissionText);
-//		console.log(submissionVal);
+		surveySelections.push(responseText);
+		surveySearchValues.push(responseVal);
 		k++;
 		reloadOptions();
 		resetCard();
@@ -141,7 +139,7 @@ $('#submit').click(function () {
 });
 
 function apiRequest() {
-	  submission.forEach(function(answer) {
+	  surveySearchValues.forEach(function(answer) {
         console.log(answer);
         $.ajax({
         url: `http://api.giphy.com/v1/gifs/search?q=${answer}&api_key=dc6zaTOxFJmzC`,

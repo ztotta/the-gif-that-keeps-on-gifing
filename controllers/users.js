@@ -12,12 +12,20 @@ var index = function(req, res, next){
 };
 
 var postResults = function(req, res, next) {
-//	user = 
-	
-		console.log('post route clicked');
-		console.log(req.body.sT);
-	res.json({success: true});
-//	res.redirect_to('/pages/results', { user: req.user });
+		User.findOne({_id: req.user._id}, function(err, user) {
+			req.body.sS.forEach(function(surveySelection) {
+				console.log(surveySelection);
+				user.surveySelections.push(surveySelection);
+			})
+			req.body.sSV.forEach(function(surveySearchValue) {
+				console.log(surveySearchValue);
+				user.surveySearchValues.push(surveySearchValue);
+			})
+			console.log("Results posted by " + req.user.name);
+			console.log("Results = " + user.surveySelections);
+			console.log("Results = " + user.surveySearchValues);
+		})
+		res.json({success: true});
 };
 
 var showResults = function(req, res, next) {
