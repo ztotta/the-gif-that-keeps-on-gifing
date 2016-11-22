@@ -13,6 +13,7 @@ router.get('/', pagesController.welcome);
 router.get('/survey', pagesController.survey);
 router.get('/results', usersController.showResults);
 router.put('/results', usersController.postResults);
+router.get('/myresults', usersController.showResults);
 //router.get('/surveyresults', usersController.grabResults)
 router.get('/about', pagesController.about);
 
