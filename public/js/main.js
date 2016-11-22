@@ -111,18 +111,29 @@ $(document).ready(function() {
 var submissionText = [];
 var submissionVal = [];
 
+var friendshipData = {sT: submissionText, sV: submissionVal };
+
 $('#submit').click(function () {
-	if ($('#submit').text() === 'Submit') {
-		$.post('/')
-		document.location.href = '/results';
+	if ($('#submit').text() === 'Submit') { 
+		
+		$.ajax({
+			url: "/results", //+this.database,
+			type: "PUT",
+			data: friendshipData,
+			dataType: 'json'
+		}).then(function(data) {
+			console.log(data);
+		}, function(err) {
+			console.error(err);
+		});
 	}
 	else {
 		responseText = $('.responses option:selected').text();
 		responseVal = $('.responses option:selected').val();
 		submissionText.push(responseText);
 		submissionVal.push(responseVal);
-		console.log(submissionText);
-		console.log(submissionVal);
+//		console.log(submissionText);
+//		console.log(submissionVal);
 		k++;
 		reloadOptions();
 		resetCard();
