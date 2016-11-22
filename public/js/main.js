@@ -112,8 +112,8 @@ var surveySearchValues = [];
 var submissionData = {sS: surveySelections, sSV: surveySearchValues};
 
 $('#submit').click(function () {
-	if ($('#submit').text() === 'Submit') { 
-		
+	if ($('#submit').text() === 'Submit') {
+
 		$.ajax({
 			url: "/results", //+this.database,
 			type: "PUT",
