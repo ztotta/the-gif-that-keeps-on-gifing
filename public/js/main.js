@@ -75,8 +75,6 @@ var questionAnswers = [
     ['Set on his goals Kanye ', 'Kanye'],
     ['Bad Mood Kanye', 'Kanye']
   ]
-
-
 ];
 
 var questionGifs = [
@@ -100,7 +98,7 @@ function resetCard() {
 		$('#option4').text(questionAnswers[k][3][0]).val(questionAnswers[k][3][1]);
 		$('#option5').text(questionAnswers[k][4][0]).val(questionAnswers[k][4][1]);
 		$("#survey-gif").attr("src", questionGifs[k]);
-		if (k >= 2) $('#submit').text('Submit');
+		if (k >= 7) $('#submit').text('Submit');
 		reloadOptions();
 };
 

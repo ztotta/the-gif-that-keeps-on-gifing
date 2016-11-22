@@ -13,6 +13,11 @@ var index = function(req, res, next){
 
 var postResults = function(req, res, next) {
 		User.findOne({_id: req.user._id}, function(err, user) {
+			user.surveySelections = [];
+			user.surveySearchValues = [];
+			user.save();
+			console.log('After save: ' + user);
+			
 			req.body.sS.forEach(function(surveySelection) {
 				console.log(surveySelection);
 				user.surveySelections.push(surveySelection);
