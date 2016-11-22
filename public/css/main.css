@@ -29,8 +29,9 @@ main {
 
 /*image placeholder*/
 img {
-    width: 200px;
-    height: 200px;
+  min-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 /*landing page image*/
@@ -58,4 +59,10 @@ a.brand-logo {
 
 footer.page-footer {
   background-color: #f06292;
+}
+
+/*Full Width Cards*/
+
+ .row-full{
+ width: 98vw;
 }
