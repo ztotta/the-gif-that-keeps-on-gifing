@@ -29,7 +29,11 @@
                 <p class="white-text">Take the survey. What, you're not scared, are you?</p> -->
               </div>
             </div>
-          <a href="/survey" class="waves-effect waves-light btn-large">GO GIF YOURSELF!</a>
+          <% if (user) { %>  
+          	<a href="/survey" class="waves-effect waves-light btn-large">GO GIF YOURSELF!</a>
+          <% } else { %>  
+          	<a href="/auth/google" class="waves-effect waves-light btn-large">SIGN UP TO GIF WIT IT!</a>
+          <% } %>  
         </div>
       </div>
     </div>
