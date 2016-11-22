@@ -1,9 +1,9 @@
 console.log('JS loaded!');
 
-function renderResults(result) {
-    $("#survey-gif").attr('src', `${result.data[0].images.original.url}`);
-    console.log(result);
-}
+//function renderResults(result) {
+//    $("#survey-gif").attr('src', `${result.data[0].images.original.url}`);
+//    console.log(result);
+//}
 
 var questionTexts = [
 	'What was the weather like when you were born?',
@@ -75,8 +75,6 @@ var questionAnswers = [
     ['Set on his goals Kanye ', 'Kanye'],
     ['Bad Mood Kanye', 'Kanye']
   ]
-
-
 ];
 
 var questionGifs = [
@@ -108,10 +106,10 @@ $(document).ready(function() {
 	resetCard();
 });
 
-var submissionText = [];
-var submissionVal = [];
+var surveySelections = [];
+var surveySearchValues = [];
 
-var friendshipData = {sT: submissionText, sV: submissionVal };
+var submissionData = {sS: surveySelections, sSV: surveySearchValues};
 
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') { 
@@ -119,10 +117,10 @@ $('#submit').click(function () {
 		$.ajax({
 			url: "/results", //+this.database,
 			type: "PUT",
-			data: friendshipData,
+			data: submissionData,
 			dataType: 'json'
 		}).then(function(data) {
-			console.log(data);
+			document.location.href = '/results';
 		}, function(err) {
 			console.error(err);
 		});
@@ -130,28 +128,13 @@ $('#submit').click(function () {
 	else {
 		responseText = $('.responses option:selected').text();
 		responseVal = $('.responses option:selected').val();
-		submissionText.push(responseText);
-		submissionVal.push(responseVal);
-//		console.log(submissionText);
-//		console.log(submissionVal);
+		surveySelections.push(responseText);
+		surveySearchValues.push(responseVal);
 		k++;
 		reloadOptions();
 		resetCard();
 	}
 });
-
-function apiRequest() {
-	  submission.forEach(function(answer) {
-        console.log(answer);
-        $.ajax({
-        url: `http://api.giphy.com/v1/gifs/search?q=${answer}&api_key=dc6zaTOxFJmzC`,
-        dataType: 'json',
-        success: function(result){
-            renderResults(result);
-            }
-        });
-    })
-}
 
 //Add Dropdown functionality to the survey page
 //this does not work yet
