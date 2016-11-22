@@ -36,10 +36,10 @@ img {
 
 /*landing page image*/
 
-#landing-gif {
-  width: 480px,
-  height: 289px
-}
+/*.landingimage {
+  width: 200px;
+  height: 200px
+}*/
 
 .brand-logo {
   margin-left: 10px;
