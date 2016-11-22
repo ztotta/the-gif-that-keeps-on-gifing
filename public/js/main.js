@@ -80,10 +80,26 @@ $(document).ready(function() {
 var submissionText = [];
 var submissionVal = [];
 
+var friendshipData = {sT: submissionText, sV: submissionVal };
+
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') { 
-		$.post('/')
-		document.location.href = '/results'; 
+		
+		$.ajax({
+			url: "/results", //+this.database,
+			type: "PUT",
+			data: friendshipData,
+			dataType: 'json'
+		}).then(function(data) {
+			console.log(data);
+		}, function(err) {
+			console.error(err);
+		});
+		
+//		$.post('/results', { submissionText: submissionText, submissionVal: submissionVal })
+//				.then(function() {
+//						document.location.href = '/results'; 
+//				});
 	}
 	else {
 		responseText = $('.responses option:selected').text();
@@ -91,7 +107,7 @@ $('#submit').click(function () {
 		submissionText.push(responseText);
 		submissionVal.push(responseVal);
 		console.log(submissionText);
-		console.log(submissionVal);
+//		console.log(submissionVal);
 		k++;
 		reloadOptions();
 		resetCard();

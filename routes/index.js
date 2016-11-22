@@ -6,13 +6,13 @@ var passport = require('passport');
 
 // Require controllers.
 var pagesController = require('../controllers/pages');
-//var usersController = require('../controllers/users');
+var usersController = require('../controllers/users');
 
 // root path:
 router.get('/', pagesController.welcome);
 router.get('/survey', pagesController.survey);
-router.get('/results', pagesController.showResults);
-router.post('/results', pagesController.postResults);
+router.get('/results', usersController.showResults);
+router.put('/results', usersController.postResults);
 router.get('/about', pagesController.about);
 
 //----------------------//
