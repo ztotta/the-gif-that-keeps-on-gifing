@@ -24,12 +24,25 @@ var postResults = function(req, res, next) {
 			console.log("Results posted by " + req.user.name);
 			console.log("Results = " + user.surveySelections);
 			console.log("Results = " + user.surveySearchValues);
+			user.save(function(err, savedUser) {
+				if (err) {
+					res.json({success: false, error: err});
+				} else {
+					res.json({success: true, user: savedUser});
+				}
+			})
 		})
-		res.json({success: true});
 };
 
 var showResults = function(req, res, next) {
-	res.render('pages/results', { user: req.user });
+	User.findOne({_id: req.user._id}, function(err, user) {
+		var surveySelections = user.surveySelections;
+		var surveySearchValues = user.surveySearchValues;
+		console.log("sSV from showResults: " + surveySearchValues);
+		console.log("User " + user);
+			res.render('pages/results', 
+				{user: req.user, surveySelections: surveySelections, surveySearchValues: surveySearchValues})
+	})
 };
 
 module.exports = {

@@ -10,8 +10,8 @@ var userSchema = new mongoose.Schema({
     email: String,
     googleId: String,
 //    surveys: [surveySchema],
-		surveySelections: [],
-		surveySearchValues: [],
+		surveySelections: [String],
+		surveySearchValues: [String],
     created: { type: Date, default: Date.now }
 });
 

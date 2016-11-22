@@ -138,19 +138,6 @@ $('#submit').click(function () {
 	}
 });
 
-function apiRequest() {
-	  surveySearchValues.forEach(function(answer) {
-        console.log(answer);
-        $.ajax({
-        url: `http://api.giphy.com/v1/gifs/search?q=${answer}&api_key=dc6zaTOxFJmzC`,
-        dataType: 'json',
-        success: function(result){
-            renderResults(result);
-            }
-        });
-    })
-}
-
 //Add Dropdown functionality to the survey page
 //this does not work yet
 function reloadOptions() {
