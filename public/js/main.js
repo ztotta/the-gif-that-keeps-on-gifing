@@ -114,8 +114,8 @@ var submissionVal = [];
 var friendshipData = {sT: submissionText, sV: submissionVal };
 
 $('#submit').click(function () {
-	if ($('#submit').text() === 'Submit') { 
-		
+	if ($('#submit').text() === 'Submit') {
+
 		$.ajax({
 			url: "/results", //+this.database,
 			type: "PUT",

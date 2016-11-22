@@ -23,9 +23,9 @@ main {
   flex: 1 0 auto;
 }
 
-.main-div {
+/*.main-div {
   height: 83vh;
-}
+}*/
 
 /*image placeholder*/
 img {
@@ -51,7 +51,9 @@ img {
   background-color: #f06292;
 }
 
-a.brand-logo {
+/*Title Styling*/
+
+h2 {
   font-family: 'Bungee Shade', cursive;
 }
 
@@ -66,3 +68,4 @@ footer.page-footer {
  .row-full{
  width: 98vw;
 }
+
