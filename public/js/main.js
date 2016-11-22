@@ -27,49 +27,49 @@ var questionAnswers = [
 		['hot af', 'hot+weather']
 	],
 	[
-		['only child', 'lonley'],
+		['only child', 'counting'],
 		['1-2 warring shogunates', 'shogunate'],
 		['lost count', 'counting'],
 		['do step-siblings count?', 'step+siblings'],
 		['clones', 'clone']
 	],
 	[
-		['charmed','charmed'],
+		['charmed','sunshine'],
 		['tumultuous','tumultuous'],
 		['still on the teat','babies'],
 		['like the VERY beginning of Bambi','lost+deer'],
 		['We do not speak of those times (still in recovery)','trauma']
 	],
 	[
-		['Awkward','awkward'],
+		['Awkward','counting'],
 		['empowering','empowering'],
 		['scarring','scarring'],
 		['smooth','smooth'],
 		['lawlz no comment','static']
 	],
 	[
-		['spooky', 'spooky'],
+		['spooky', 'sunshine'],
 		['silly', 'silly'],
 		['never', 'never'],
 		['sudden', 'sudden'],
 		['slow', 'slow']
 	],
   [
-    ['souls', 'souls'],
+    ['souls', 'counting'],
     ['peanuts', 'peanuts'],
     ['garbage', 'garbage'],
     ['guacamole ', 'guacamole '],
     ['steak', 'steak']
   ],
   [
-    ['Amadeus ', 'Amadeus '],
+    ['Amadeus ', 'sunshine'],
     ['Queen Latifah’s Last Holiday', 'queen+latifah'],
     ['Saw II', 'Saw+movie'],
     ['Cinderella ', 'Cinderella '],
     ['he Devil Wears Prada', 'devil']
   ],
   [
-    ['The Old Kanye ', 'Kanye '],
+    ['The Old Kanye ', 'counting'],
     ['Straight from the go Kanye', 'Kanye'],
     ['Chop up the soul Kanye', 'Kanye'],
     ['Set on his goals Kanye ', 'Kanye'],
