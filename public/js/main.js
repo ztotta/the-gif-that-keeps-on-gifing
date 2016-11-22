@@ -1,9 +1,9 @@
 console.log('JS loaded!');
 
-function renderResults(result) {
-    $("#survey-gif").attr('src', `${result.data[0].images.original.url}`);
-    console.log(result);
-}
+//function renderResults(result) {
+//    $("#survey-gif").attr('src', `${result.data[0].images.original.url}`);
+//    console.log(result);
+//}
 
 var questionTexts = [
 	'What was the weather like when you were born?',
