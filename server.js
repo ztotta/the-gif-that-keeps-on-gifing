@@ -24,10 +24,6 @@ var apiRoutes = require('./routes/api');
 // Instantiate a server application.
 var app = express();
 
-// EJS view engine config
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 // Configure the application (and set it's title!).
 app.set('title', env.TITLE);
 app.set('safe-title', env.SAFE_TITLE);
@@ -43,7 +39,7 @@ app.use(logger('dev'));
 
 // Helper layer (parses the requests, and adds further data).
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cookieParser('notsosecretnowareyou'));
 

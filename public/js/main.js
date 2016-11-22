@@ -10,7 +10,12 @@ var questionTexts = [
 	'How many siblings did you have?',
 	'What was your relationship with your mother like when you were 13?',
 	'How was your experience with puberty?',
-	'How do imagine your death?'
+	'How do imagine your death?',
+  'What is your favorite snack?',
+  'Which of the following films most accurately represents your life?',
+  'Which Kanye?'
+
+
 ];
 
 var questionAnswers = [
@@ -22,33 +27,56 @@ var questionAnswers = [
 		['hot af', 'hot+weather']
 	],
 	[
-		['Answer 2.1', 'val'],
-		['Answer 2.2', 'val'],
-		['Answer 2.3', 'val'],
-		['Answer 2.4', 'val'],
-		['Answer 2.5', 'val']
+		['only child', 'lonley'],
+		['1-2 warring shogunates', 'shogunate'],
+		['lost count', 'counting'],
+		['do step-siblings count?', 'step+siblings'],
+		['clones', 'clone']
 	],
 	[
-		['Answer 3.1','val'],
-		['Answer 2','val'],
-		['Answer 3','val'],
-		['Answer 4','val'],
-		['Answer 5','val']
+		['charmed','charmed'],
+		['tumultuous','tumultuous'],
+		['still on the teat','babies'],
+		['like the VERY beginning of Bambi','lost+deer'],
+		['We do not speak of those times (still in recovery)','trauma']
 	],
 	[
-		['Answer 4.1','val'],
-		['Answer 2','val'],
-		['Answer 3','val'],
-		['Answer 4','val'],
-		['Answer 5','val']
+		['Awkward','awkward'],
+		['empowering','empowering'],
+		['scarring','scarring'],
+		['smooth','smooth'],
+		['lawlz no comment','static']
 	],
 	[
-		['Answer 5', 'val'],
-		['Answer 2', 'val'],
-		['Answer 3', 'val'],
-		['Answer 4', 'val'],
-		['Answer 5', 'val']
-	]
+		['spooky', 'spooky'],
+		['silly', 'silly'],
+		['never', 'never'],
+		['sudden', 'sudden'],
+		['slow', 'slow']
+	],
+  [
+    ['souls', 'souls'],
+    ['peanuts', 'peanuts'],
+    ['garbage', 'garbage'],
+    ['guacamole ', 'guacamole '],
+    ['steak', 'steak']
+  ],
+  [
+    ['Amadeus ', 'Amadeus '],
+    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
+    ['Saw II', 'Saw+movie'],
+    ['Cinderella ', 'Cinderella '],
+    ['he Devil Wears Prada', 'devil']
+  ],
+  [
+    ['The Old Kanye ', 'Kanye '],
+    ['Straight from the go Kanye', 'Kanye'],
+    ['Chop up the soul Kanye', 'Kanye'],
+    ['Set on his goals Kanye ', 'Kanye'],
+    ['Bad Mood Kanye', 'Kanye']
+  ]
+
+
 ];
 
 var questionGifs = [
@@ -56,7 +84,10 @@ var questionGifs = [
 	"http://i.giphy.com/utOBfj70LUHN6.gif",
 	"http://i.giphy.com/Nkko2AtLJiEEg.gif",
 	"http://i.giphy.com/od34hMgPzLt0Q.gif",
-	"http://i.giphy.com/8RClotEIoXuAE.gif"
+	"http://i.giphy.com/8RClotEIoXuAE.gif",
+  "http://i.giphy.com/8iPc2Nd9XG5kk.gif",
+  "http://i.giphy.com/13C8uU4ZKi9CW4.gif",
+  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif"
 ];
 
 k=0;
@@ -69,7 +100,7 @@ function resetCard() {
 		$('#option4').text(questionAnswers[k][3][0]).val(questionAnswers[k][3][1]);
 		$('#option5').text(questionAnswers[k][4][0]).val(questionAnswers[k][4][1]);
 		$("#survey-gif").attr("src", questionGifs[k]);
-		if (k >= 4) $('#submit').text('Submit');
+		if (k >= 7) $('#submit').text('Submit');
 		reloadOptions();
 };
 
@@ -80,18 +111,29 @@ $(document).ready(function() {
 var submissionText = [];
 var submissionVal = [];
 
+var friendshipData = {sT: submissionText, sV: submissionVal };
+
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') { 
-		$.post('/')
-		document.location.href = '/results'; 
+		
+		$.ajax({
+			url: "/results", //+this.database,
+			type: "PUT",
+			data: friendshipData,
+			dataType: 'json'
+		}).then(function(data) {
+			console.log(data);
+		}, function(err) {
+			console.error(err);
+		});
 	}
 	else {
 		responseText = $('.responses option:selected').text();
 		responseVal = $('.responses option:selected').val();
 		submissionText.push(responseText);
 		submissionVal.push(responseVal);
-		console.log(submissionText);
-		console.log(submissionVal);
+//		console.log(submissionText);
+//		console.log(submissionVal);
 		k++;
 		reloadOptions();
 		resetCard();
