@@ -7,7 +7,6 @@ function renderTimelineGifs(result) {
 	j++;
 }
 
-
 var surveySearchValuesTimeline = [];
 var apiResults = [];
 

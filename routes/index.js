@@ -14,15 +14,14 @@ router.get('/survey', pagesController.survey);
 router.get('/results', usersController.showResults);
 router.put('/results', usersController.postResults);
 router.get('/myresults', usersController.showResults);
-//router.get('/surveyresults', usersController.grabResults)
 router.get('/about', pagesController.about);
 
 //----------------------//
 
 // The root route renders our only view
-router.get('/', function(req, res) {
-  res.render('index', { user: req.user });
-});
+//router.get('/', function(req, res) {
+//  res.render('index', { user: req.user });
+//});
 
 router.get('/auth/google', passport.authenticate(
   'google',
@@ -41,6 +40,10 @@ router.get('/oauth2callback', passport.authenticate(
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout();
+  res.redirect('/');
+});
+
+router.get('*', function(req, res){
   res.redirect('/');
 });
 
