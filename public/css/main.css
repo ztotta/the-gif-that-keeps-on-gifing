@@ -16,6 +16,7 @@ body {
 
 main {
   flex: 1 0 auto;
+  height: 83vh;
 }
 
 /*image placeholder*/
@@ -27,6 +28,7 @@ img {
 
 .brand-logo {
   margin-left: 10px;
+  color: #F8BBD0;
 }
 
 /*NAVBAR STYLING*/
@@ -38,35 +40,49 @@ img {
 /*Title Styling*/
 
 h2 {
-  font-family: 'Bungee Shade', cursive;
   color: #d81b60;
 }
 
 /*FOOTER STYLING*/
 
 footer.page-footer {
-  background-color: #E91E63;
+  background-color: #f48fb1;
 }
 
 /*Full Width Cards*/
 
  .row-full{
- width: 98vw;
+ width: 100vw;
+ height: 50vh;
 }
 
 .card-panel {
-  /*background-color: #E91E63;*/
+  background-color: #fce4ec;
+  margin-bottom: 5vh;
+}
+
+#landingpage {
+  margin-top: -1vh;
+  height: 90vh;
+}
+
+.maincontent {
+  margin-top: 20vh;
 }
 
 /*Buttons*/
 .btn {
-  background-color: #00BCD4;
+  background-color: #FF4081;
 }
 
 button {
-  background-color: #00BCD4;
+  background-color: #FF4081;
 }
 
 btn-large {
-  background-color: #00BCD4;
+  background-color: #FF4081;
+}
+
+.main-div {
+  margin-top: 6vh;
 }

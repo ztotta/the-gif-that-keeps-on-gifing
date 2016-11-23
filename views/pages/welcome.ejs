@@ -6,34 +6,31 @@
 <body>
   <%- include('../partials/header') %>
   <main class="main-div">
-    <div class="container center-align main-div row-full">
-      <div class="row">
-        <div class="col s12">
-            <h2><%= title %></h2>
-          <div class="card-panel">
-            <div class="row">
-              <div class="col s6">
-                <img class="landingimage" src="https://media.giphy.com/media/NLLQUmfh3os6c/giphy.gif">
-                <p class="white-text">The Gif That Keeps On Giffing is for everyone who's ever looked at a GIF and though "me" or "same". Answer fun questions and translate your life into a collection of #relatable GIFs that you can share with friends and family!</p>
-              </div>
-<!--               <div class="col s3">
-                <img class="landingimage" id= "landing-gif" src="https://media.giphy.com/media/NLLQUmfh3os6c/giphy.gif">
-                <p class="white-text">Your life, but in gif form.</p>
-              </div>
-              <div class="col s3">
-                <img class="landingimage" src="https://media.giphy.com/media/3o7TKu8D1d12Eo9wSQ/giphy.gif">
-                <p class="white-text">Answer fun questions and share your GIF life story with friends!</p>
-              </div>
-              <div class="col s3">
-                <img class="landingimage" src="https://media.giphy.com/media/7jeVmx2e4BEt2/giphy.gif">
-                <p class="white-text">Take the survey. What, you're not scared, are you?</p> -->
-              </div>
-            </div>
-          <% if (user) { %>
-          	<a href="/survey" class="waves-effect waves-light btn-large">GO GIF YOURSELF!</a>
-          <% } else { %>
-          	<a href="/auth/google" class="waves-effect waves-light btn-large">SIGN UP TO GIF WIT IT!</a>
-          <% } %>
+    <div class="container main-div">
+     <div class="row">
+      <div class="col s12 m6">
+        <div class="card center-align">
+          <div class="card-content center-align">
+            <img class="landingimage" src="https://media.giphy.com/media/NLLQUmfh3os6c/giphy.gif">
+            <p>Answer fun questions and translate your life into a collection of #relatable GIFs that you can share with friends and family!</p>
+          </div>
+          <div class="card-action">
+            <% if (user) { %>
+              <a href="/survey" class="waves-effect btn-large btn">GO GIF YOURSELF!</a>
+            <% } else { %>
+              <a href="/auth/google" class="waves-effect btn-large btn">SIGN UP TO GIF WIT IT!</a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card center-align">
+          <div class="card-content center-align">
+            <img class="landingimage" src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif">
+            <input placeholder="What are you searching for?" id="key_word" type="text" class="validate">
+            <p>Get a rad GIF instantly!</p>
+            <a href="#" class="waves-effect waves-light btn-large btn">INSTAGIF</a>
+          </div>
         </div>
       </div>
     </div>
