@@ -6,26 +6,18 @@ body {
 
 a { color: #00B7FF; }
 
-/*Buttons*/
-
-btn-large {
-  background-color: #a7ffeb;
-}
-
 /*Make Footer Sticky*/
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: #FFFFFF;
 }
 
 main {
   flex: 1 0 auto;
+  height: 78vh;
 }
-
-/*.main-div {
-  height: 83vh;
-}*/
 
 /*image placeholder*/
 img {
@@ -34,15 +26,9 @@ img {
   max-height: 300px;
 }
 
-/*landing page image*/
-
-/*.landingimage {
-  width: 200px;
-  height: 200px
-}*/
-
 .brand-logo {
   margin-left: 10px;
+  color: #F8BBD0;
 }
 
 /*NAVBAR STYLING*/
@@ -54,18 +40,49 @@ img {
 /*Title Styling*/
 
 h2 {
-  font-family: 'Bungee Shade', cursive;
+  color: #d81b60;
 }
 
 /*FOOTER STYLING*/
 
 footer.page-footer {
-  background-color: #f06292;
+  background-color: #f48fb1;
 }
 
-/*Full Width Cards*/
+/*/*Full Width Cards*/
 
  .row-full{
- width: 98vw;
+ width: 100vw;
+ height: 50vh;
+}*/
+
+.card-panel {
+  background-color: #fce4ec;
+  margin-bottom: 5vh;
 }
 
+#landingpage {
+  margin-top: -1vh;
+  height: 90vh;
+}
+
+.maincontent {
+  margin-top: 20vh;
+}
+
+/*Buttons*/
+.btn {
+  background-color: #FF4081;
+}
+
+button {
+  background-color: #FF4081;
+}
+
+btn-large {
+  background-color: #FF4081;
+}
+
+.main-div {
+  margin-top: 5vh;
+}
