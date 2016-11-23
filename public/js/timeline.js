@@ -59,7 +59,7 @@ $('#share-results').click(function() {
         </div>
       	</div>
 			`);
-			$('input').val(`http://localhost:3000/shareMyResults/${data.user._id}`);
+			$('input').val(`http://pacific-river-56706.herokuapp.com/shareMyResults/${data.user._id}`);
 		}
 	})
 })
