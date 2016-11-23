@@ -42,3 +42,13 @@ Promise.all(surveySearchValuesTimeline.map(function(queryString, index) {
 					renderTimelineGifs(data.result);
 				})
 		});
+
+$('#share-results').click(function() {
+	$.get({
+		url: "/getMyId", //+this.database,
+		dataType: 'json',
+		success: function(data) {
+			$('.results-main').append(`<p>http://localhost:3000/shareMyResults/${data.user._id}</p>`)
+		}
+	})
+})
