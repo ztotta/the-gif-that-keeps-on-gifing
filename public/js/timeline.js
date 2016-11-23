@@ -43,6 +43,28 @@ Promise.all(surveySearchValuesTimeline.map(function(queryString, index) {
 				})
 		});
 
+<<<<<<< HEAD
+
+// FB.ui(
+// {
+//    method: 'share',
+//    href: 'https://developers.facebook.com/docs/',
+//  },
+//  // callback
+//  function (response) {
+//    if (response && !response.error_message) {
+//      alert('Posting completed.');
+//    } else {
+//      alert('Error while posting.');
+//    }
+//  }
+// );
+
+// $('#shareBtn').click(function() {
+//  console.log('fb link')
+//  FB.ui();
+// });
+=======
 $('#share-results').click(function() {
 	$.get({
 		url: "/getMyId", //+this.database,
@@ -63,3 +85,4 @@ $('#share-results').click(function() {
 		}
 	})
 })
+>>>>>>> 98c762ec20dff20b3f5e4b582ff2b4b0c8581b4a

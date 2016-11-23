@@ -52,7 +52,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Useful for debugging the state of requests.
 app.use(debugReq);
 app.use(session({
-//    secret: "WDIRocks!",
+   secret: "WDIRocks!",
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true
