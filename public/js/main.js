@@ -14,11 +14,11 @@ var questionTexts = [
   'What is your favorite snack?',
   'Which of the following films most accurately represents your life?',
   'Which Kanye?',
-  'Which Kanye?',
-  'Which Kanye?',
-  'Which Kanye?',
-  'Which Kanye?',
-  'Which Kanye?'
+  'What was your favorite book as a child?',
+  'What is the afterlife like?',
+  'Pick one rom-com superstar to adopt you:',
+  'Ultimate bucket list item?',
+  'Dream pet:'
 ];
 
 var questionAnswers = [
@@ -79,44 +79,44 @@ var questionAnswers = [
     ['Bad Mood Kanye', 'Kanye']
   ],
 	[
-    ['Amadeus ', 'sunshine'],
-    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
-    ['Saw II', 'Saw+movie'],
-    ['Cinderella ', 'Cinderella '],
-    ['he Devil Wears Prada', 'devil']
+    ['Everybody Poops ', 'Poop'],
+    ['Harry Potter', 'harry+potter'],
+    ['Crime & Punishment', 'mother+russia'],
+    ['Halo ', 'Halo '],
+    ['Bambi', 'bambi']
   ],
 	[
-    ['Amadeus ', 'counting'],
-    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
-    ['Saw II', 'Saw+movie'],
-    ['Cinderella ', 'Cinderella '],
-    ['he Devil Wears Prada', 'devil']
+    ['Depends where you end up ', 'hell'],
+    ['Nothing', 'blank+space'],
+    ['Fun as hell', 'hell'],
+    ['Full of massages and m&ms', 'heaven'],
+    ['San Junipero', 'computer+server']
   ],
 	[
-    ['Amadeus ', 'sunshine'],
-    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
-    ['Saw II', 'Saw+movie'],
-    ['Cinderella ', 'Cinderella '],
-    ['he Devil Wears Prada', 'devil']
+    ['Michelle Pfeiffer', 'michelle+pfeiffer'],
+    ['Meg Ryan', 'meg+ryan'],
+    ['Hugh Grant', 'hugh+grant'],
+    ['Julia Roberts ', 'julia+roberts '],
+    ['Pre-McConaissance Matthew', 'Matthew+mcconaughey']
   ],
 	[
-    ['Amadeus ', 'counting'],
-    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
-    ['Saw II', 'Saw+movie'],
-    ['Cinderella ', 'Cinderella '],
-    ['he Devil Wears Prada', 'devil']
+    ['Skydive ', 'Skydive'],
+    ['Rob a bank', 'butch+cassidy'],
+    ['Travel the world', 'earth'],
+    ['sleep for > 6 hours', 'sleep'],
+    ['Drive across the US', 'roadtrip']
   ],
 	[
-    ['Amadeus ', 'counting'],
-    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
-    ['Saw II', 'Saw+movie'],
-    ['Cinderella ', 'Cinderella '],
-    ['he Devil Wears Prada', 'devil']
+    ['Tarantula', 'tarantula'],
+    ['Dinosaur', 'dinosaur+sled'],
+    ['Basset Hound', 'basset+hound'],
+    ['Monkey ', 'monkey+slide '],
+    ['Shamoo', 'orca']
   ]
 ];
 
 var questionGifs = [
-	"http://i.giphy.com/utOBfj70LUHN6.gif",
+	"http://i.giphy.com/cISOHQRbTfNe0.gif",
 	"http://i.giphy.com/utOBfj70LUHN6.gif",
 	"http://i.giphy.com/Nkko2AtLJiEEg.gif",
 	"http://i.giphy.com/od34hMgPzLt0Q.gif",
@@ -124,11 +124,11 @@ var questionGifs = [
   "http://i.giphy.com/8iPc2Nd9XG5kk.gif",
   "http://i.giphy.com/13C8uU4ZKi9CW4.gif",
   "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
-  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
-  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
-  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
-  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
-  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif"
+  "http://i.giphy.com/66XPTwbYSuIaQ.gif",
+  "http://i.giphy.com/4vz2YB5WA0AE0.gif",
+  "http://i.giphy.com/eSrUVJ5AGkf6g.gif",
+  "http://i.giphy.com/l2Je0WawqkU6QnT5C.gif",
+  "http://i.giphy.com/10FtRf9SBSqQlG.gif"
 ];
 
 k=0;
