@@ -7,7 +7,11 @@ var welcome = function(req, res, next) {
 };
 
 var survey = function(req, res, next) {
-	res.render('pages/survey', { user: req.user });
+	if (!req.user) {
+			res.redirect('/');
+	} else {
+			res.render('pages/survey', { user: req.user });
+	}
 };
 
 var about = function(req, res, next) {
