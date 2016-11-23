@@ -11,13 +11,13 @@ var questionTexts = [
 'What was your relationship with your mother like when you were 13?', //3
 'How was your experience with puberty?', //4
 'How do imagine your death?', //5
-  'What is your favorite snack?', //6
-  'Which of the following films most accurately represents your life?', //7
-  'Which Kanye?', //8
-  'What was your favorite book as a child?', //9
-  'What is the afterlife like?', //10
-  'Pick one rom-com superstar to adopt you:', //11
-  'Ultimate bucket list item?', //12
+'What is your favorite snack?', //6
+'Which of the following films most accurately represents your life?', //7
+'Which Kanye?', //8
+'What was your favorite book as a child?', //9
+'What is the afterlife like?', //10
+'Pick one rom-com superstar to adopt you:', //11
+'Ultimate bucket list item?', //12
 
 ];
 
@@ -78,28 +78,28 @@ var questionAnswers = [
     ['Set on his goals Kanye ', 'Kanye'],
     ['Bad Mood Kanye', 'Kanye']
   ], //8
-    [
+	[
     ['Everybody Poops ', 'everybody+poops'],
     ['Harry Potter', 'harry+potter'],
     ['Crime & Punishment', 'mother+russia'],
     ['Halo ', 'Halo+5'],
     ['Bambi', 'bambi']
   ], //9
-    [
+	[
     ['Depends where you end up ', 'hell'],
     ['Nothing', 'night+sky'],
     ['Fun as hell', 'hell'],
     ['Full of massages and m&ms', 'heaven'],
     ['San Junipero', 'computer+server']
   ], //10
-    [
+	[
     ['Michelle Pfeiffer', 'michelle+pfeiffer'],
     ['Meg Ryan', 'meg+ryan'],
     ['Hugh Grant', 'hugh+grant'],
     ['Julia Roberts ', 'julia+roberts '],
     ['Pre-McConaissance Matthew', 'Matthew+mcconaughey']
   ], //11
-    [
+  [
     ['Skydive ', 'Skydive'],
     ['Rob a bank', 'butch+cassidy'],
     ['Travel the world', 'earth'],
