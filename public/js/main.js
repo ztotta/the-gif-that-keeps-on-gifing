@@ -13,9 +13,12 @@ var questionTexts = [
 	'How do imagine your death?',
   'What is your favorite snack?',
   'Which of the following films most accurately represents your life?',
+  'Which Kanye?',
+  'Which Kanye?',
+  'Which Kanye?',
+  'Which Kanye?',
+  'Which Kanye?',
   'Which Kanye?'
-
-
 ];
 
 var questionAnswers = [
@@ -74,6 +77,41 @@ var questionAnswers = [
     ['Chop up the soul Kanye', 'Kanye'],
     ['Set on his goals Kanye ', 'Kanye'],
     ['Bad Mood Kanye', 'Kanye']
+  ],
+	[
+    ['Amadeus ', 'sunshine'],
+    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
+    ['Saw II', 'Saw+movie'],
+    ['Cinderella ', 'Cinderella '],
+    ['he Devil Wears Prada', 'devil']
+  ],
+	[
+    ['Amadeus ', 'counting'],
+    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
+    ['Saw II', 'Saw+movie'],
+    ['Cinderella ', 'Cinderella '],
+    ['he Devil Wears Prada', 'devil']
+  ],
+	[
+    ['Amadeus ', 'sunshine'],
+    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
+    ['Saw II', 'Saw+movie'],
+    ['Cinderella ', 'Cinderella '],
+    ['he Devil Wears Prada', 'devil']
+  ],
+	[
+    ['Amadeus ', 'counting'],
+    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
+    ['Saw II', 'Saw+movie'],
+    ['Cinderella ', 'Cinderella '],
+    ['he Devil Wears Prada', 'devil']
+  ],
+	[
+    ['Amadeus ', 'counting'],
+    ['Queen Latifah’s Last Holiday', 'queen+latifah'],
+    ['Saw II', 'Saw+movie'],
+    ['Cinderella ', 'Cinderella '],
+    ['he Devil Wears Prada', 'devil']
   ]
 ];
 
@@ -85,6 +123,11 @@ var questionGifs = [
 	"http://i.giphy.com/8RClotEIoXuAE.gif",
   "http://i.giphy.com/8iPc2Nd9XG5kk.gif",
   "http://i.giphy.com/13C8uU4ZKi9CW4.gif",
+  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
+  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
+  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
+  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
+  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
   "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif"
 ];
 
@@ -98,7 +141,7 @@ function resetCard() {
 		$('#option4').text(questionAnswers[k][3][0]).val(questionAnswers[k][3][1]);
 		$('#option5').text(questionAnswers[k][4][0]).val(questionAnswers[k][4][1]);
 		$("#survey-gif").attr("src", questionGifs[k]);
-		if (k >= 7) $('#submit').text('Submit');
+		if (k >= 12) $('#submit').text('Submit');
 		reloadOptions();
 };
 
@@ -113,7 +156,6 @@ var submissionData = {sS: surveySelections, sSV: surveySearchValues};
 
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') {
-
 		$.ajax({
 			url: "/results", //+this.database,
 			type: "PUT",
