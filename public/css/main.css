@@ -29,6 +29,7 @@ img {
 .brand-logo {
   margin-left: 10px;
   color: #F8BBD0;
+  font-family: 'Londrina Outline', cursive
 }
 
 /*NAVBAR STYLING*/
@@ -51,6 +52,10 @@ h2 {
 
 footer.page-footer {
   background-color: #f48fb1;
+}
+
+.footer-h5{
+  font-family: 'Londrina Outline', cursive
 }
 
 /*Full Width Cards*/
@@ -101,7 +106,7 @@ btn-large {
   height: 230px;
 }
 
-.card .card-image img {
+.landingimage {
   display: inline-block;
   border-radius: 2px 2px 0 0;
   left: 0;
@@ -114,6 +119,23 @@ btn-large {
 
 .card {
   max-width: 405px;
+}
+
+/*survey card*/
+
+.surveycard {
+  min-width: 306px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.surveyimage {
+  display: inline-block;
+/*  border-radius: 2px 2px 0 0;*/
+  min-width: 100%;
+  min-height: 100%;
+  align-content: center;
 }
 
 /*MEDIA QUERIES*/
