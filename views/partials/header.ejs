@@ -7,7 +7,9 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/about">About</a></li>
         <% if (user) { %>
-        	<li><a href="/myresults">My Results</a></li>
+        	<% if (user.surveySelections.length >= 12) { %>
+        		<li><a href="/myresults">My Results</a></li>
+        	<% } %>
         <% } %>
         <li>
           <!-- imported from OAuth lesson, moved from welcome page to here -->
