@@ -16,7 +16,7 @@ body {
 
 main {
   flex: 1 0 auto;
-  height: 83vh;
+  height: 78vh;
 }
 
 /*image placeholder*/
@@ -49,12 +49,12 @@ footer.page-footer {
   background-color: #f48fb1;
 }
 
-/*Full Width Cards*/
+/*/*Full Width Cards*/
 
  .row-full{
  width: 100vw;
  height: 50vh;
-}
+}*/
 
 .card-panel {
   background-color: #fce4ec;
@@ -84,5 +84,5 @@ btn-large {
 }
 
 .main-div {
-  margin-top: 6vh;
+  margin-top: 5vh;
 }
