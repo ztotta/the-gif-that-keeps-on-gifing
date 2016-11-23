@@ -29,12 +29,17 @@ img {
 .brand-logo {
   margin-left: 10px;
   color: #F8BBD0;
+  font-family: 'Londrina Outline', cursive
 }
 
 /*NAVBAR STYLING*/
 
 .nav-wrapper {
   background-color: #f06292;
+}
+header {
+  position: relative;
+  z-index: 1000;
 }
 
 /*Title Styling*/
@@ -49,7 +54,11 @@ footer.page-footer {
   background-color: #f48fb1;
 }
 
-/*/*Full Width Cards*/
+.footer-h5{
+  font-family: 'Londrina Outline', cursive
+}
+
+/*Full Width Cards*/
 
  .row-full{
  width: 100vw;
@@ -83,6 +92,61 @@ btn-large {
   background-color: #FF4081;
 }
 
+/*Landing Page Specifics*/
 .main-div {
   margin-top: 5vh;
+}
+
+.landingcard {
+  height: 60vh;
+}
+
+.card-image {
+  overflow: hidden;
+  height: 230px;
+}
+
+.landingimage {
+  display: inline-block;
+  border-radius: 2px 2px 0 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.card {
+  max-width: 405px;
+}
+
+/*survey card*/
+
+.surveycard {
+  min-width: 306px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.surveyimage {
+  display: inline-block;
+/*  border-radius: 2px 2px 0 0;*/
+  min-width: 100%;
+  min-height: 100%;
+  align-content: center;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1001px) {
+  main {
+    flex: 1 0 auto;
+    min-height: 130vh;
+  }
+
+  .main-div {
+    margin: 0 auto;
+  }
 }

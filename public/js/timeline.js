@@ -43,6 +43,7 @@ Promise.all(surveySearchValuesTimeline.map(function(queryString, index) {
 				})
 		});
 
+<<<<<<< HEAD
 
 // FB.ui(
 // {
@@ -63,3 +64,14 @@ Promise.all(surveySearchValuesTimeline.map(function(queryString, index) {
 //  console.log('fb link')
 //  FB.ui();
 // });
+=======
+$('#share-results').click(function() {
+	$.get({
+		url: "/getMyId", //+this.database,
+		dataType: 'json',
+		success: function(data) {
+			$('.results-main').append(`<p>http://localhost:3000/shareMyResults/${data.user._id}</p>`)
+		}
+	})
+})
+>>>>>>> 98c762ec20dff20b3f5e4b582ff2b4b0c8581b4a

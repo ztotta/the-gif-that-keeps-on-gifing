@@ -11,8 +11,18 @@ body {
   background: #212121;
   color: #fff;
   overflow-x: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  }
 
-}  /* INTRO SECTION
+main {
+  flex: 1 0 auto;
+  min-height: 730vh;
+}
+
+
+/* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
@@ -28,9 +38,14 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  font-family: 'Londrina Outline', cursive;
 }
 
+h5 {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 2rem;
+}
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -105,6 +120,10 @@ time {
   margin-bottom: 8px;
 }
 
+button {
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
 
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -149,6 +168,14 @@ time {
     left: -289px;
     /*250+45-6*/
   }
+  main {
+    flex: 1 0 auto;
+    min-height: 725vh;
+  }
+
+  img {
+    max-width: 200px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -165,5 +192,13 @@ time {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #f48fb1 transparent transparent;
+  }
+  main {
+    flex: 1 0 auto;
+    min-height: 725vh;
+  }
+
+  img {
+    max-width: 300px;
   }
 }

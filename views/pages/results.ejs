@@ -6,10 +6,15 @@
 </head>
 <body>
   <%- include('../partials/header') %>
-  <main>
+  <main class="results-main">
     <div class="intro">
       <div class="container">
+<<<<<<< HEAD
         <h1>YOU, BUT GIFIER</h1>
+=======
+        <h1 class="results-title">YOU, BUT GIFIER</h1>
+
+>>>>>>> 98c762ec20dff20b3f5e4b582ff2b4b0c8581b4a
       </div>
     </div>
     <div class="timeline">
@@ -17,83 +22,91 @@
         <li>
           <div class="center-align">
             <h5>What was the weather like when you were born?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[0] %></p>
-            <p class="surveySearchValues"><%= surveySearchValues[0] %></p>
+            <p style="display:none;" class="surveySearchValues"><%= surveySearchValues[0] %></p>
+            <p><%= surveySearchValues[0] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>How many siblings did you have?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[1] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[1] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[1] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>What was your relationship with your mother like when you were 13?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[2] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[2] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[2] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>How was your experience with puberty?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[3] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[3] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[3] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>How do imagine your death?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[4] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[4] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[4] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>What is your favorite snack?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[5] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[5] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[5] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>What is your favorite snack?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[6] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[6] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[6] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>Which of the following films most accurately represents your life?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[7] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[7] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[7] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>Which Kanye?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[8] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[8] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[8] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>Question 10</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[9] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[9] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[9] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>Question 11</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[10] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[10] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[10] %></p>
           </div>
         </li>
         <li>
           <div class="center-align">
             <h5>Question 12</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[11] %></p>
-						<p class="surveySearchValues"><%= surveySearchValues[11] %></p>
+						<p style="display:none;" class="surveySearchValues"><%= surveySearchValues[11] %></p>
           </div>
         </li>
       </ul>
+      
+      <% if (user) { %>
+      	<button id="share-results">Share my results!</button>
+      <% } %>
+      
+    </div>
+    <div class="center-align fb-button">
+      <button class="btn waves-effect waves-light"> Share on Facebook!</button>
     </div>
   </main>
 
 <div id="shareBtn" class="btn btn-success clearfix">Share on Facebook!</div>
   <%- include('../partials/footer') %>
-
   <%- include('../partials/scripts') %>
-  <script src="./js/timeline.js"></script>
+  <script src="/js/timeline.js"></script>
 </body>
 </html>

@@ -20,18 +20,3 @@ $('#instagif').click(function (){
     })
 })
 
-
-   //.then(function (data){
-//       $('#gifimage').attr("src", `http://api.giphy.com/v1/gifs/search?q=${data}&api_key=dc6zaTOxFJmzC` )
-//     }, function (err){
-//       console.log(err);
-//     })
-
-// });
-
-
-// $("#instagif").click(function (){
-//   $('#gifimage').attr('src', `http://api.giphy.com/v1/gifs/search?q=${gifResults}&api_key=dc6zaTOxFJmzC` )
-
-// })
-
