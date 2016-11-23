@@ -11,8 +11,18 @@ body {
   background: #212121;
   color: #fff;
   overflow-x: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  }
 
-}  /* INTRO SECTION
+main {
+  flex: 1 0 auto;
+  min-height: 850vh;
+}
+
+
+/* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .intro {
