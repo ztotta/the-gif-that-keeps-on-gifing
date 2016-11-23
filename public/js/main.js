@@ -128,7 +128,7 @@ var questionGifs = [
   "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
   "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
   "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
-  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif"
+	"https://media.giphy.com/media/xv7ngBv35OXXG/giphy.gif"
 ];
 
 k=0;
@@ -141,7 +141,13 @@ function resetCard() {
 		$('#option4').text(questionAnswers[k][3][0]).val(questionAnswers[k][3][1]);
 		$('#option5').text(questionAnswers[k][4][0]).val(questionAnswers[k][4][1]);
 		$("#survey-gif").attr("src", questionGifs[k]);
-		if (k >= 12) $('#submit').text('Submit');
+		if (k >= 12) {
+			$('#submit').text('Submit');
+			$('.question-number').text('Click submit to get giffy wit it');
+			$('.question-text').text('NA NA NA NA NA NA NA');
+			$("#survey-gif").attr("src", "https://media.giphy.com/media/xv7ngBv35OXXG/giphy.gif");
+			$('.responses').remove();	
+		}
 		reloadOptions();
 };
 
@@ -156,6 +162,8 @@ var submissionData = {sS: surveySelections, sSV: surveySearchValues};
 
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') {
+//		$('#submit').css( "background-color", "#f06292" );
+		
 		$.ajax({
 			url: "/results", //+this.database,
 			type: "PUT",
@@ -168,13 +176,18 @@ $('#submit').click(function () {
 		});
 	}
 	else {
-		responseText = $('.responses option:selected').text();
-		responseVal = $('.responses option:selected').val();
-		surveySelections.push(responseText);
-		surveySearchValues.push(responseVal);
-		k++;
-		reloadOptions();
-		resetCard();
+		if ($('.responses option:selected').text() === 'Your Answer') {
+			return;
+		}
+		else {
+			responseText = $('.responses option:selected').text();
+			responseVal = $('.responses option:selected').val();
+			surveySelections.push(responseText);
+			surveySearchValues.push(responseVal);
+			k++;
+			reloadOptions();
+			resetCard();
+		}
 	}
 });
 
