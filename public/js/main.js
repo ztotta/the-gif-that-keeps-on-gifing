@@ -130,7 +130,7 @@ function resetCard() {
 			$('.question-number').text('Click submit to get giffy wit it');
 			$('.question-text').text('NA NA NA NA NA NA NA');
 			$("#survey-gif").attr("src", "https://media.giphy.com/media/xv7ngBv35OXXG/giphy.gif");
-			$('.responses').remove();	
+			$('.responses').remove();
 		} else {
 			$('.question-number').text('Question ' + (k+1));
 			$('.question-text').text(questionTexts[k]);
@@ -146,6 +146,9 @@ function resetCard() {
 
 $(document).ready(function() {
 	resetCard();
+
+// RESPONSIVE NAVBAR
+$(".button-collapse").sideNav();
 });
 
 var surveySelections = [];
@@ -156,7 +159,7 @@ var submissionData = {sS: surveySelections, sSV: surveySearchValues};
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') {
 //		$('#submit').css( "background-color", "#f06292" );
-		
+
 		$.ajax({
 			url: "/results", //+this.database,
 			type: "PUT",
@@ -228,3 +231,8 @@ function reloadOptions() {
 	window.addEventListener("scroll", callbackFunc);
 
 })();
+
+$('.navlinks').on('click', function(e) {
+  console.log('fuck this')
+  e.stopPropagation;
+})

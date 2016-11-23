@@ -1,26 +1,45 @@
 <header>
     <!-- Created Header for all pages -->
 <div class="navbar-fixed">
-  <nav>
+   <nav>
     <div class="nav-wrapper">
       <a href="/" class="brand-logo">The Gif That Keeps On Gifing</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/about">About</a></li>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="navlinks" href="/about">About</a></li>
         <% if (user) { %>
         	<% if (user.surveySelections.length >= 12) { %>
         		<li><a href="/myresults">My Results</a></li>
         	<% } %>
         <% } %>
+      	
+      	<% console.log(user) %>
+      	
         <li>
           <!-- imported from OAuth lesson, moved from welcome page to here -->
           <% if (user) { %>
-          <a href="/logout"><i class="material-icons left"></i>Logout</a>
+          <a class="navlinks" href="/logout">Logout</a>
           <% } else { %>
-          <a href="/auth/google"><i class="material-icons left"></i>Login</a>
+          <a class="navlinks" href="/auth/google">Login</a>
+          <% } %>
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a class="navlinks" href="/about">About</a></li>
+        <% if (user) { %>
+          <li><a class="navlinks" href="/myresults">My Results</a></li>
+        <% } %>
+        <li>
+          <!-- imported from OAuth lesson, moved from welcome page to here -->
+          <% if (user) { %>
+          <a class="navlinks" href="/logout">Logout</a>
+          <% } else { %>
+          <a class="navlinks" href="/auth/google">Login</a>
           <% } %>
         </li>
       </ul>
     </div>
   </nav>
+
 </div>
 </header>

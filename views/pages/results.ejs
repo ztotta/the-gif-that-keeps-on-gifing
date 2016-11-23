@@ -19,6 +19,7 @@
           <div class="center-align">
             <h5>What was the weather like when you were born?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[0] %></p>
             <p style="display:none;" class="surveySearchValues"><%= surveySearchValues[0] %></p>
+            <p><%= surveySearchValues[0] %></p>
           </div>
         </li>
         <li>
@@ -88,10 +89,16 @@
           </div>
         </li>
       </ul>
+      
+      <% if (user) { %>
+      	<button id="share-results">Share my results!</button>
+      <% } %>
+      
     </div>
+
   </main>
   <%- include('../partials/footer') %>
   <%- include('../partials/scripts') %>
-  <script src="./js/timeline.js"></script>
+  <script src="/js/timeline.js"></script>
 </body>
 </html>
