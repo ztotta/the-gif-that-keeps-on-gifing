@@ -83,6 +83,31 @@ btn-large {
   background-color: #FF4081;
 }
 
+/*Landing Page Specifics*/
 .main-div {
   margin-top: 5vh;
+}
+
+.landingcard {
+  height: 60vh;
+}
+
+.card-image {
+  overflow: hidden;
+  height: 230px;
+}
+
+.card .card-image img {
+  display: inline-block;
+  border-radius: 2px 2px 0 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.card {
+  max-width: 405px;
 }
