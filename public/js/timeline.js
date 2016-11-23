@@ -42,3 +42,24 @@ Promise.all(surveySearchValuesTimeline.map(function(queryString, index) {
 					renderTimelineGifs(data.result);
 				})
 		});
+
+
+// FB.ui(
+// {
+//    method: 'share',
+//    href: 'https://developers.facebook.com/docs/',
+//  },
+//  // callback
+//  function (response) {
+//    if (response && !response.error_message) {
+//      alert('Posting completed.');
+//    } else {
+//      alert('Error while posting.');
+//    }
+//  }
+// );
+
+// $('#shareBtn').click(function() {
+//  console.log('fb link')
+//  FB.ui();
+// });

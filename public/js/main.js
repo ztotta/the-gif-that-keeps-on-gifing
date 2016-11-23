@@ -6,19 +6,19 @@ console.log('JS loaded!');
 //}
 
 var questionTexts = [
-	'What was the weather like when you were born?',
-	'How many siblings did you have?',
-	'What was your relationship with your mother like when you were 13?',
-	'How was your experience with puberty?',
-	'How do imagine your death?',
-  'What is your favorite snack?',
-  'Which of the following films most accurately represents your life?',
-  'Which Kanye?',
-  'What was your favorite book as a child?',
-  'What is the afterlife like?',
-  'Pick one rom-com superstar to adopt you:',
-  'Ultimate bucket list item?',
-  'Dream pet:'
+	'What was the weather like when you were born?', //1
+	'How many siblings did you have?', //2
+	'What was your relationship with your mother like when you were 13?', //3
+	'How was your experience with puberty?', //4
+	'How do imagine your death?', //5
+  'What is your favorite snack?', //6
+  'Which of the following films most accurately represents your life?', //7
+  'Which Kanye?', //8
+  'What was your favorite book as a child?', //9
+  'What is the afterlife like?', //10
+  'Pick one rom-com superstar to adopt you:', //11
+  'Ultimate bucket list item?', //12
+
 ];
 
 var questionAnswers = [
@@ -28,107 +28,99 @@ var questionAnswers = [
 		['overcast', 'overcast'],
 		['cold af', 'freezing'],
 		['hot af', 'hot+weather']
-	],
+	], //1
 	[
-		['only child', 'counting'],
-		['1-2 warring shogunates', 'shogunate'],
+		['only child', 'one+bat'],
+		['1-2 warring shogunates', 'sumo+wrestler+shimmy'],
 		['lost count', 'counting'],
 		['do step-siblings count?', 'step+siblings'],
-		['clones', 'clone']
-	],
+		['clones', 'clone+donald+trump']
+	], //2
 	[
 		['charmed','sunshine'],
 		['tumultuous','tumultuous'],
 		['still on the teat','babies'],
 		['like the VERY beginning of Bambi','lost+deer'],
 		['We do not speak of those times (still in recovery)','trauma']
-	],
+	], //3
 	[
-		['Awkward','counting'],
+		['Awkward','awkward'],
 		['empowering','empowering'],
 		['scarring','scarring'],
 		['smooth','smooth'],
 		['lawlz no comment','static']
-	],
+	], //4
 	[
-		['spooky', 'sunshine'],
+		['spooky', 'spooky'],
 		['silly', 'silly'],
 		['never', 'never'],
-		['sudden', 'sudden'],
-		['slow', 'slow']
-	],
+		['sudden', 'surprise+pug'],
+		['slow', 'sloth']
+	], //5
   [
-    ['souls', 'counting'],
+    ['souls', 'souls'],
     ['peanuts', 'peanuts'],
     ['garbage', 'garbage'],
     ['guacamole ', 'guacamole '],
     ['steak', 'steak']
-  ],
+  ], //6
   [
-    ['Amadeus ', 'sunshine'],
+    ['Amadeus ', 'mozart'],
     ['Queen Latifah’s Last Holiday', 'queen+latifah'],
     ['Saw II', 'Saw+movie'],
     ['Cinderella ', 'Cinderella '],
-    ['he Devil Wears Prada', 'devil']
-  ],
+    ['The Devil Wears Prada', 'devil']
+  ], //7
   [
-    ['The Old Kanye ', 'counting'],
+    ['The Old Kanye ', 'Kanye'],
     ['Straight from the go Kanye', 'Kanye'],
     ['Chop up the soul Kanye', 'Kanye'],
     ['Set on his goals Kanye ', 'Kanye'],
     ['Bad Mood Kanye', 'Kanye']
-  ],
+  ], //8
 	[
-    ['Everybody Poops ', 'Poop'],
+    ['Everybody Poops ', 'everybody+poops'],
     ['Harry Potter', 'harry+potter'],
     ['Crime & Punishment', 'mother+russia'],
-    ['Halo ', 'Halo '],
+    ['Halo ', 'Halo+5'],
     ['Bambi', 'bambi']
-  ],
+  ], //9
 	[
     ['Depends where you end up ', 'hell'],
-    ['Nothing', 'blank+space'],
+    ['Nothing', 'night+sky'],
     ['Fun as hell', 'hell'],
     ['Full of massages and m&ms', 'heaven'],
     ['San Junipero', 'computer+server']
-  ],
+  ], //10
 	[
     ['Michelle Pfeiffer', 'michelle+pfeiffer'],
     ['Meg Ryan', 'meg+ryan'],
     ['Hugh Grant', 'hugh+grant'],
     ['Julia Roberts ', 'julia+roberts '],
     ['Pre-McConaissance Matthew', 'Matthew+mcconaughey']
-  ],
+  ], //11
 	[
     ['Skydive ', 'Skydive'],
     ['Rob a bank', 'butch+cassidy'],
     ['Travel the world', 'earth'],
     ['sleep for > 6 hours', 'sleep'],
     ['Drive across the US', 'roadtrip']
-  ],
-	[
-    ['Tarantula', 'tarantula'],
-    ['Dinosaur', 'dinosaur+sled'],
-    ['Basset Hound', 'basset+hound'],
-    ['Monkey ', 'monkey+slide '],
-    ['Shamoo', 'orca']
-  ]
+  ] //12
 ];
 
 var questionGifs = [
-	"http://i.giphy.com/cISOHQRbTfNe0.gif",
-	"http://i.giphy.com/utOBfj70LUHN6.gif",
-	"http://i.giphy.com/Nkko2AtLJiEEg.gif",
-	"http://i.giphy.com/od34hMgPzLt0Q.gif",
-	"http://i.giphy.com/8RClotEIoXuAE.gif",
-  "http://i.giphy.com/8iPc2Nd9XG5kk.gif",
-  "http://i.giphy.com/13C8uU4ZKi9CW4.gif",
-  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif",
-  "http://i.giphy.com/66XPTwbYSuIaQ.gif",
-  "http://i.giphy.com/4vz2YB5WA0AE0.gif",
-  "http://i.giphy.com/eSrUVJ5AGkf6g.gif",
-  "http://i.giphy.com/l2Je0WawqkU6QnT5C.gif",
-  "http://i.giphy.com/10FtRf9SBSqQlG.gif"
+	"http://i.giphy.com/cISOHQRbTfNe0.gif", //1
+	"http://i.giphy.com/utOBfj70LUHN6.gif", //2
+	"http://i.giphy.com/Nkko2AtLJiEEg.gif", //3
+	"http://i.giphy.com/od34hMgPzLt0Q.gif", //4
+	"http://i.giphy.com/8RClotEIoXuAE.gif", //5
+  "http://i.giphy.com/8iPc2Nd9XG5kk.gif", //6
+  "http://i.giphy.com/13C8uU4ZKi9CW4.gif", //7
+  "http://i.giphy.com/xTcnSNxfOFmfCCUTPG.gif", //8
+  "http://i.giphy.com/66XPTwbYSuIaQ.gif", //9
+  "http://i.giphy.com/4vz2YB5WA0AE0.gif", //10
+  "http://i.giphy.com/eSrUVJ5AGkf6g.gif", //11
+  "http://i.giphy.com/l2Je0WawqkU6QnT5C.gif", //12
 ];
 
 k=0;
