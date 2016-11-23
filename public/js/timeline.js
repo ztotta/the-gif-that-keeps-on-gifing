@@ -70,7 +70,18 @@ $('#share-results').click(function() {
 		url: "/getMyId", //+this.database,
 		dataType: 'json',
 		success: function(data) {
-			$('.results-main').append(`<p>http://localhost:3000/shareMyResults/${data.user._id}</p>`)
+			$('.results-main').append(`
+				<div id='share-link' class="row">
+        <div class="col s12">
+          Share with friends AND family!:
+          <div class="input-field inline">
+            <input type="text">
+            <label for="email" data-error="wrong" data-success="right"></label>
+          </div>
+        </div>
+      	</div>
+			`);
+			$('input').val(`http://localhost:3000/shareMyResults/${data.user._id}`);
 		}
 	})
 })
