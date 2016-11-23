@@ -89,14 +89,11 @@
           </div>
         </li>
       </ul>
-      
-      <% if (user) { %>
-      	<button id="share-results">Share my results!</button>
-      <% } %>
-      
-    </div>
-    <div class="center-align fb-button">
-      <button class="btn waves-effect waves-light"> Share on Facebook!</button>
+      <div class="center-align fb-button">
+        <% if (user) { %>
+            <button id="share-results" class="btn waves-effect waves-light">Share on Facebook!</button>
+        <% } %>
+      </div>
     </div>
   </main>
   <%- include('../partials/footer') %>

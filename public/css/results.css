@@ -18,7 +18,7 @@ body {
 
 main {
   flex: 1 0 auto;
-  min-height: 730vh;
+  min-height: 732vh;
 }
 
 
@@ -125,6 +125,10 @@ button {
   margin-bottom: 2vh;
 }
 
+.timeline-gif {
+  max-width: 300px;
+}
+
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -176,7 +180,17 @@ button {
   img {
     max-width: 200px;
   }
+
+  .timeline-gif {
+    max-width: 200px;
+  }
+
+  main {
+    flex: 1 0 auto;
+    min-height: 600vh;
+  }
 }
+
 
 @media screen and (max-width: 600px) {
   .timeline ul li {
@@ -195,10 +209,22 @@ button {
   }
   main {
     flex: 1 0 auto;
-    min-height: 725vh;
+    min-height: 585vh;
   }
 
   img {
     max-width: 300px;
+  }
+
+  .timeline-gif {
+    max-width: 200px;
+  }
+}
+
+
+@media screen and (max-width: 630px) {
+  main {
+    flex: 1 0 auto;
+    min-height: 630vh;
   }
 }
