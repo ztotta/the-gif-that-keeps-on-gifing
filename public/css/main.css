@@ -36,6 +36,10 @@ img {
 .nav-wrapper {
   background-color: #f06292;
 }
+header {
+  position: relative;
+  z-index: 1000;
+}
 
 /*Title Styling*/
 
@@ -49,7 +53,7 @@ footer.page-footer {
   background-color: #f48fb1;
 }
 
-/*/*Full Width Cards*/
+/*Full Width Cards*/
 
  .row-full{
  width: 100vw;
@@ -110,4 +114,17 @@ btn-large {
 
 .card {
   max-width: 405px;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 1001px) {
+  main {
+    flex: 1 0 auto;
+    min-height: 130vh;
+  }
+
+  .main-div {
+    margin: 0 auto;
+  }
 }
