@@ -22,8 +22,6 @@ main {
 /*image placeholder*/
 img {
   min-height: 200px;
-  max-width: 300px;
-  max-height: 300px;
 }
 
 .brand-logo {
@@ -99,6 +97,7 @@ btn-large {
 
 .landingcard {
   height: 60vh;
+  margin: 0 auto;
 }
 
 .card-image {
@@ -124,10 +123,11 @@ btn-large {
 /*survey card*/
 
 .surveycard {
-  min-width: 306px;
+  min-width: 400px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .surveyimage {
@@ -148,5 +148,15 @@ btn-large {
 
   .main-div {
     margin: 0 auto;
+  }
+
+  .row .col.offset-m2 {
+    margin-left: 16.6666666667%;
+  }
+}
+
+@media only screen and (min-width: 601px)
+.row .col.offset-m2 {
+    margin-left: 1%;
   }
 }
