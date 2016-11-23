@@ -18,7 +18,6 @@
           <div class="center-align">
             <h5>What was the weather like when you were born?</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[0] %></p>
             <p style="display:none;" class="surveySearchValues"><%= surveySearchValues[0] %></p>
-            <p><%= surveySearchValues[0] %></p>
           </div>
         </li>
         <li>
@@ -84,13 +83,13 @@
         <li>
           <div class="center-align">
             <h5>Question 12</h5><img class="timeline-gif" src="" alt=""> <p><%= surveySelections[11] %></p>
-                        <p style="display:none;" class="surveySearchValues"><%= surveySearchValues[11] %></p>
+                        <p style="display:none;" class="surveySearchValues "><%= surveySearchValues[11] %></p>
           </div>
         </li>
       </ul>
       <div class="center-align fb-button">
         <% if (user) { %>
-            <button id="share-results" class="btn waves-effect waves-light">Share on Facebook!</button>
+            <button id="share-results" class="btn waves-effect waves-purple">Share on Facebook!</button>
         <% } %>
       </div>
     </div>

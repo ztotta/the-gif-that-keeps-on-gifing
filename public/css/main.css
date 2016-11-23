@@ -90,6 +90,14 @@ btn-large {
   background-color: #FF4081;
 }
 
+.btn, .btn-large{
+    background-color: #FF4081;
+}
+
+.btn:focus, .btn-large:focus, .btn-floating:focus {
+    background-color: #d500f9;
+}
+
 /*Landing Page Specifics*/
 .main-div {
   margin-top: 5vh;
@@ -136,6 +144,11 @@ btn-large {
   min-width: 100%;
   min-height: 100%;
   align-content: center;
+}
+
+.abt-images {
+  max-width: 300px;
+  max-height: 175px;
 }
 
 /*MEDIA QUERIES*/
