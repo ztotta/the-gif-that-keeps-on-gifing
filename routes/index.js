@@ -14,6 +14,8 @@ router.get('/survey', pagesController.survey);
 router.get('/results', usersController.showResults);
 router.put('/results', usersController.postResults);
 router.get('/myresults', usersController.showResults);
+router.get('/getMyId', usersController.getMyId);
+router.get('/shareMyResults/:user_id', usersController.shareResults);
 router.get('/about', pagesController.about);
 
 //----------------------//

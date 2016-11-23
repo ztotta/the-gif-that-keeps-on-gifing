@@ -1,16 +1,6 @@
 // Require resource's model(s).
 var User = require("../models/user");
 
-//var index = function(req, res, next){
-//  User.find({}, function(err, users) {
-//    if (err) {
-//      res.json({message: err});
-//    } else {
-//      res.render('pages/welcome', {users: users});
-//    }
-//  });
-//};
-
 var postResults = function(req, res, next) {
 		User.findOne({_id: req.user._id}, function(err, user) {
 			user.surveySelections = [];
@@ -47,15 +37,33 @@ var showResults = function(req, res, next) {
 	User.findOne({_id: req.user._id}, function(err, user) {
 		var surveySelections = user.surveySelections;
 		var surveySearchValues = user.surveySearchValues;
-//		console.log("sSV from showResults: " + surveySearchValues);
-//		console.log("User " + user);
 			res.render('pages/results', 
 				{user: req.user, surveySelections: surveySelections, surveySearchValues: surveySearchValues})
 	})
 };
 
+var getMyId = function(req, res, next) {
+	if (!req.user) {
+			res.redirect('/');
+	}
+	
+	User.findOne({_id: req.user._id}, function(err, user) {
+			res.json({user: user})
+	})
+};
+
+var shareResults = function(req, res, next) {
+	User.findOne({_id: req.params.user_id}, function(err, user) {
+		var surveySelections = user.surveySelections;
+		var surveySearchValues = user.surveySearchValues;
+			res.render('pages/results', 
+				{user: '', surveySelections: surveySelections, surveySearchValues: surveySearchValues})
+	})
+};
+
 module.exports = {
-//  index: index,
 	postResults: postResults,
-	showResults: showResults
+	showResults: showResults,
+	getMyId: getMyId,
+	shareResults: shareResults
 };
