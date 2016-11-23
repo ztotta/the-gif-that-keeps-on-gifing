@@ -29,6 +29,7 @@ img {
 .brand-logo {
   margin-left: 10px;
   color: #F8BBD0;
+  font-family: 'Londrina Outline', cursive
 }
 
 /*NAVBAR STYLING*/
@@ -51,6 +52,10 @@ h2 {
 
 footer.page-footer {
   background-color: #f48fb1;
+}
+
+.footer-h5{
+  font-family: 'Londrina Outline', cursive
 }
 
 /*Full Width Cards*/
