@@ -101,7 +101,7 @@ btn-large {
   height: 230px;
 }
 
-.card .card-image img {
+.landingimage {
   display: inline-block;
   border-radius: 2px 2px 0 0;
   left: 0;
@@ -114,6 +114,23 @@ btn-large {
 
 .card {
   max-width: 405px;
+}
+
+/*survey card*/
+
+.surveycard {
+  min-width: 306px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.surveyimage {
+  display: inline-block;
+/*  border-radius: 2px 2px 0 0;*/
+  min-width: 100%;
+  min-height: 100%;
+  align-content: center;
 }
 
 /*MEDIA QUERIES*/
