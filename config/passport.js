@@ -5,8 +5,7 @@ var User = require('../models/user');
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK,
-		immediate: true
+    callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log("returned to callback")
@@ -24,8 +23,6 @@ passport.use(new GoogleStrategy({
         });
         newUser.save(function(err) {
           if (err) return cb(err);
-          console.log('user saved')
-          console.log(newUser)
           return cb(null, newUser);
         });
       }
