@@ -5,8 +5,7 @@ var User = require('../models/user');
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_SECRET,
-    callbackURL: process.env.GOOGLE_CALLBACK,
-		immediate: true
+    callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOne({ 'googleId': profile.id }, function(err, user) {
@@ -22,7 +21,7 @@ passport.use(new GoogleStrategy({
         });
         newUser.save(function(err) {
           if (err) return cb(err);
-          return cb(null, User);
+          return cb(null, newUser);
         });
       }
     });
