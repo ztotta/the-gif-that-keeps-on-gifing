@@ -8,11 +8,13 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, cb) {
+    console.log("returned to callback")
     User.findOne({ 'googleId': profile.id }, function(err, user) {
       if (err) return cb(err);
       if (user) {
         return cb(null, user);
       } else {
+        console.log('saving new user')
         // we have a new student via OAuth!
         var newUser = new User({
           name: profile.displayName,
@@ -21,7 +23,9 @@ passport.use(new GoogleStrategy({
         });
         newUser.save(function(err) {
           if (err) return cb(err);
-          return cb(null, User);
+          console.log('user saved')
+          console.log(newUser)
+          return cb(null, newUser);
         });
       }
     });
