@@ -128,7 +128,15 @@ btn-large {
   max-width: 405px;
 }
 
+.main-card {
+  margin: 0 auto;
+}
+
 /*survey card*/
+
+.main-survey-card {
+  margin-left: 0 auto;
+}
 
 .surveycard {
   min-width: 400px;
@@ -182,7 +190,16 @@ btn-large {
 }
 
 @media only screen and (min-width: 601px)
-.row .col.offset-m2 {
-    margin-left: 1%;
+  .row .col.offset-m2 {
+      margin-left: 1%;
+    }
+
+  .surveyimage {
+    display: inline-block;
+  /*  border-radius: 2px 2px 0 0;*/
+    max-width: 200px;
+    max-height: 200px;
+    align-content: center;
   }
+
 }
