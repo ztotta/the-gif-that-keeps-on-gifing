@@ -17,6 +17,7 @@ body {
 main {
   flex: 1 0 auto;
   height: 78vh;
+  padding-bottom: 15vh;
 }
 
 /*image placeholder*/
@@ -27,7 +28,7 @@ img {
 .brand-logo {
   margin-left: 10px;
   color: #F8BBD0;
-  font-family: 'Londrina Outline', cursive
+  font-family: 'Londrina Outline', cursive;
 }
 
 /*NAVBAR STYLING*/
@@ -53,7 +54,7 @@ footer.page-footer {
 }
 
 .footer-h5{
-  font-family: 'Londrina Outline', cursive
+  font-family: 'Londrina Outline', cursive;
 }
 
 /*Full Width Cards*/
@@ -128,7 +129,20 @@ btn-large {
   max-width: 405px;
 }
 
+.main-card {
+  margin: 0 auto;
+}
+
+.modal-image {
+  min-width: 200px;
+  max-height: 350px;
+}
+
 /*survey card*/
+
+.main-survey-card {
+  margin-left: 0 auto;
+}
 
 .surveycard {
   min-width: 400px;
@@ -147,8 +161,21 @@ btn-large {
 }
 
 .abt-images {
-  max-width: 300px;
-  max-height: 175px;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+}
+
+.our-names {
+  font-family: 'Londrina Outline', cursive;
+}
+
+.github-links {
+  color: black;
+}
+
+.about-container {
+  margin-top: 15vh;
 }
 
 /*MEDIA QUERIES*/
@@ -169,7 +196,16 @@ btn-large {
 }
 
 @media only screen and (min-width: 601px)
-.row .col.offset-m2 {
-    margin-left: 1%;
+  .row .col.offset-m2 {
+      margin-left: 1%;
+    }
+
+  .surveyimage {
+    display: inline-block;
+  /*  border-radius: 2px 2px 0 0;*/
+    max-width: 200px;
+    max-height: 200px;
+    align-content: center;
   }
+
 }

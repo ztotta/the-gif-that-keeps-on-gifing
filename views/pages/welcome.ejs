@@ -7,36 +7,44 @@
   <%- include('../partials/header') %>
   <main class="main-div center-align">
     <div class="container main-div">
-     <div class="row front-row">
-      <div class="col s12 m9 l6">
-        <div class="card center-align landingcard">
-          <div class="card-image">
-            <img class="landingimage" src="https://media.giphy.com/media/NLLQUmfh3os6c/giphy.gif">
+      <div class="row front-row main-card">
+        <div class="col s12 l6 main-card">
+          <div class="card center-align landingcard">
+            <div class="card-image">
+              <img class="landingimage" src="https://media.giphy.com/media/NLLQUmfh3os6c/giphy.gif">
+            </div>
+            <div class="card-content center-align">
+              <p>Answer fun questions and translate your life into a collection of #relatable GIFs that you can share with friends and family!</p>
+              <br>
+              <% if (user) { %>
+                <a href="/survey" class="waves-effect waves-purple btn-large btn">GO GIF YOURSELF!</a>
+              <% } else { %>
+                <a href="/auth/google" class="waves-effect waves-purple btn-large btn">SIGN UP TO GIF WIT IT!</a>
+              <% } %>
+            </div>
           </div>
-          <div class="card-content center-align">
-            <p>Answer fun questions and translate your life into a collection of #relatable GIFs that you can share with friends and family!</p>
-            <br>
-            <% if (user) { %>
-              <a href="/survey" class="waves-effect waves-purple btn-large btn">GO GIF YOURSELF!</a>
-            <% } else { %>
-              <a href="/auth/google" class="waves-effect waves-purple btn-large btn">SIGN UP TO GIF WIT IT!</a>
-            <% } %>
+        </div>
+        <div class="col s12 l6 main-card">
+          <div class="card center-align landingcard">
+            <div class="card-image">
+              <img class="landingimage" src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif">
+            </div>
+            <div class="card-content center-align">
+              <p>Get a rad GIF instantly!</p>
+              <input placeholder="What are you searching for?" id="key_word" type="text" class="validate">
+              <a href="#modal1" id="instagif" class="waves-effect waves-purple btn-large btn">INSTAGIF</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col s12 m9 l6">
-        <div class="card center-align landingcard">
-          <div class="card-image">
-            <img id="gifimage" class="landingimage" src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif">
+        <div id="modal1" class="modal center-align">
+          <div class="modal-content">
+            <img id="gifimage" class="modal-image" src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif">
           </div>
-          <div class="card-content center-align">
-            <p>Get a rad GIF instantly!</p>
-            <input placeholder="What are you searching for?" id="key_word" type="text" class="validate">
-            <a href="#" id="instagif" class="waves-effect waves-purple btn-large btn">INSTAGIF</a>
-
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-large btn">Search again!</a>
           </div>
         </div>
-      </div>
     </div>
   </main>
   <%- include('../partials/footer') %>

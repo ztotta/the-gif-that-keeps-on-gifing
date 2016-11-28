@@ -49,7 +49,7 @@ $('#share-results').click(function() {
 		dataType: 'json',
 		success: function(data) {
 			$('.results-main').append(`
-				<div id='share-link' class="row">
+				<div id='share-link' class="row center-align">
         <div class="col s12">
           Share with friends AND family!:
           <div class="input-field inline">
