@@ -1,5 +1,37 @@
-# the-gif-that-keeps-on-gifing
+# The Gif That Keeps On Gifing
+---
 
-:tada:
+![homepage](https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/a679f8e3c4cb792f94bcce2c6a3e42d8b05622c5/README%20img/homepage.png?raw=true)
 
-Enjoy… 
+###Description:
+
+After signing up through Google OAuth 2.0, users answer survey questions about their lives: 
+![survey] (https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/35f0cdbe2e32bcd13639d6bd3978b170852c4cd8/README%20img/survey.png?raw=true)
+
+Their results are then returned in a vertical timeline with their responses represented by corresponding .gifs pulled from the Giphy API:
+
+![survey] (https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/master/README%20img/timeline2.png?raw=true)
+
+Users can then share these results with a unique URL and/or retake the survey.
+
+They can also search for individual .gifs from the Giphy API without logging in through our homepage InstaGif feature:
+
+![instagif] (https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/master/README%20img/instagif.png?raw=true)
+
+###Technologies used:
+
+Full-stack app using MongoDB, Node.js + Express, JavaScript, jQuery / AJAX, Google OAuth 2.0, Materialize, HTML, CSS and the Giphy API. Deployed via Heroku.
+
+###Code
+
+Our top challenges included:
+- sending data back and forth with our Mongo database using a mix of AJAX and HTTP requests, and then populating that data onto the Results page timeline in the correct order
+- generating unique, functioning URLs that could be shared with non-logged-in users
+- styling our site symmetrically and responsively via Materialize
+
+###Yet to be resolved:
+Although we are pleased with the progression of our project and its functionality, there are just a few things that we would add given more time, including a direct post-to-facebook button and a responsive footer on the timeline page.
+
+###Conclusion:
+Ultimately, this turned out to be an excellent project choice for our group. We intentionally chose a concept that has relatively simple funcitonality so that we could focus on making something engaging while working congruently as a team using Agile development and Git version control. We were able to accomplish both of those goals while also overcoming a number of unforseen challenges that we worked on both as a team and as individuals. We worked extremely well together as a unit and each one of us is proud of what we accomplished in the past few days. The balance between the attainability of our project's scope and the amount that it pushed us to understand new concepts was even better than we had anticipated, and the gif...it keeps on gifing.
+
