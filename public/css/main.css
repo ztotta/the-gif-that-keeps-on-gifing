@@ -193,12 +193,22 @@ btn-large {
   .row .col.offset-m2 {
     margin-left: 16.6666666667%;
   }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: -25vw;
+    margin-top: 10vh;
+  }
 }
 
-@media only screen and (min-width: 601px)
+@media only screen and (min-width: 601px) {
   .row .col.offset-m2 {
       margin-left: 1%;
     }
+
 
   .surveyimage {
     display: inline-block;
