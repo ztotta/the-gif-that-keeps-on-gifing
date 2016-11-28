@@ -33,7 +33,7 @@ Our top challenges included:
 - styling our site symmetrically and responsively via Materialize
 
 ###Yet to be resolved:
-Although we are pleased with the progression of our project and its functionality, there are just a few things that we would add if given more time, including a direct post-to-facebook button and a responsive footer on the timeline page.
+Although we are pleased with the progression of our project and its functionality, there are just a few things that we would add if given more time, including a direct post-to-facebook button, a responsive footer on the timeline page, and improved responsiveness for mobile devices.
 
 ###Conclusion:
 Ultimately, this turned out to be an excellent project choice for our group. We intentionally chose a concept that has relatively simple funcitonality so that we could make something engaging while focusing on working congruently as a team using Agile development and Git version control. We were able to accomplish both of those goals while also overcoming a number of unforseen challenges that we worked on both as a team and as individuals. We worked extremely well as a unit and each one of us is proud of what we accomplished in the past few days. The balance between the attainability of our project's scope and the amount that it pushed us to understand new concepts was even better than we had anticipated, and the gif...it keeps on gifing.
