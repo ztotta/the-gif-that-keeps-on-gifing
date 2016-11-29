@@ -8,22 +8,20 @@ var passport = require('passport');
 var pagesController = require('../controllers/pages');
 var usersController = require('../controllers/users');
 
-// root path:
+// Root path:
 router.get('/', pagesController.welcome);
+
 router.get('/survey', pagesController.survey);
+router.get('/about', pagesController.about);
 router.get('/results', usersController.showResults);
 router.put('/results', usersController.postResults);
 router.get('/myresults', usersController.showResults);
 router.get('/getMyId', usersController.getMyId);
+
+// Path for sharing results with non-logged-in users:
 router.get('/shareMyResults/:user_id', usersController.shareResults);
-router.get('/about', pagesController.about);
 
 //----------------------//
-
-// The root route renders our only view
-//router.get('/', function(req, res) {
-//  res.render('index', { user: req.user });
-//});
 
 router.get('/auth/google', passport.authenticate(
   'google',
@@ -49,7 +47,7 @@ router.get('*', function(req, res){
   res.redirect('/');
 });
 
-//-------------//
+//----------------------//
 
 
 module.exports = router;

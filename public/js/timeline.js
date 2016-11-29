@@ -10,10 +10,15 @@ function renderTimelineGifs(result) {
 var surveySearchValuesTimeline = [];
 var apiResults = [];
 
+// The answer's corresponding search values stored in the 'results.ejs' file are pushed into the above array:
 $.each($('.surveySearchValues'), function( index, value ) {
   surveySearchValuesTimeline.push(value.innerHTML);
 });
 
+// Each answer's corresponding search value is then inserted into an API request URL.
+// A Promise.all() is set up to catch the API responses, push them into an array, and
+// then sort them by their index before sending them out 1-by-1 to populate the 
+// corresponding .gif and answer on the 'results.ejs' view (i.e. the user's timeline):
 Promise.all(surveySearchValuesTimeline.map(function(queryString, index) {
 	var x = new Promise(function(res, rej) {
 		 $.ajax({
@@ -43,6 +48,9 @@ Promise.all(surveySearchValuesTimeline.map(function(queryString, index) {
 				})
 		});
 
+// When the user clicks 'Share' after seeing their results, their id is retrieved from
+// the database and <html> is generated to present the newly created URL which users
+// can then copy and share:
 $('#share-results').click(function() {
 	$.get({
 		url: "/getMyId", //+this.database,

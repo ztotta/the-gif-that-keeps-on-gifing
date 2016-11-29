@@ -1,10 +1,5 @@
 console.log('JS loaded!');
 
-//function renderResults(result) {
-//    $("#survey-gif").attr('src', `${result.data[0].images.original.url}`);
-//    console.log(result);
-//}
-
 var questionTexts = [
 'What was the weather like when you were born?', //1
 'How many siblings did you have?', //2
@@ -21,8 +16,9 @@ var questionTexts = [
 
 ];
 
-var questionAnswers = [
+var questionAnswers = [ 
   [
+		// left: text that users see on survey | right: value that is stored for searching the API
       ['sunny', 'sunshine'],
       ['stormy', 'thunder+storm'],
       ['overcast', 'overcast'],
@@ -108,6 +104,7 @@ var questionAnswers = [
   ] //12
 ];
 
+// .gifs on the survey cards
 var questionGifs = [
   "http://i.giphy.com/cISOHQRbTfNe0.gif", //1
   "http://i.giphy.com/utOBfj70LUHN6.gif", //2
@@ -123,6 +120,10 @@ var questionGifs = [
   "http://i.giphy.com/l2Je0WawqkU6QnT5C.gif", //12
 ];
 
+// After the user clicks 'Next' on the survey and their results are stored (see below),
+// the card is reset with the corresponding .gif, question, and answer choices.
+// After the survey is complete, the 'Next' button turns to 'Submit' and Will Smith
+// welcomes the user to go check out their results:
 k=0;
 function resetCard() {
 		if (k >= 12) {
@@ -156,6 +157,12 @@ var surveySearchValues = [];
 
 var submissionData = {sS: surveySelections, sSV: surveySearchValues};
 
+// When the user selects an answer and clicks 'Next', their answer is pushed into
+// the above arrays, which hold their selection and the corresponding search value.
+// The card is then reset (see above). 
+// If the 'Next' button has been changed to 'Submit' (after the survey is complete [see above]),
+// The results are sent to the database with an Ajax Put request, updating the user's stored
+// answers. The user is then taken to the results page (continue in 'timeline.js'):
 $('#submit').click(function () {
 	if ($('#submit').text() === 'Submit') {
 //		$('#submit').css( "background-color", "#f06292" );
@@ -206,7 +213,6 @@ function reloadOptions() {
 	var items = document.querySelectorAll(".timeline li");
 
 	// check if an element is in viewport
-	// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
 	function isElementInViewport(el) {
 		var rect = el.getBoundingClientRect();
 		return (
