@@ -20,7 +20,7 @@ They can also search for individual .gifs from the Giphy API without logging in 
 
 ###Technologies used:
 
-This is a full-stack app employing MongoDB, Node.js + Express, JavaScript, jQuery / AJAX, Google OAuth 2.0, Materialize, HTML, CSS and the Giphy API. Deployed via Heroku.
+This is a full-stack app employing MongoDB, Node.js + Express, JavaScript, jQuery / AJAX / Promises, Google OAuth 2.0, Materialize, HTML, CSS and the Giphy API. Deployed via Heroku.
 
 ###Code
 
