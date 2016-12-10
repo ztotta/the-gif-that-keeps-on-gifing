@@ -26,7 +26,7 @@ This is a full-stack app employing MongoDB, Node.js + Express, JavaScript, jQuer
 
 Our top challenges included:
 
-- sending data to and from our Mongo database and the Giphy API using a mix of AJAX and HTTP requests, and then populating that data onto the Results page timeline in the correct order
+- sending data to and from our Mongo database and the Giphy API using a mix of AJAX and HTTP requests, and then populating that data onto the Results page timeline in the correct order. This required writing a Promise.all that gathers the asynchronous responses into one array so that they can then be sorted into the correct order again by their index property
 
 - generating unique, functional URLs that can be shared with non-logged-in users
 
