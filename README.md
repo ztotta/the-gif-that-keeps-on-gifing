@@ -1,9 +1,12 @@
-# [The Gif That Keeps On Gifing](http://pacific-river-56706.herokuapp.com/)
+# THE GIF THAT KEEPS ON GIFING 
+### a MEN-Stack App
+##### by Zach Totta, Cait Friedlander, and Mel Rabineau
+#####[pacific-river-56706.herokuapp.com](http://pacific-river-56706.herokuapp.com/)
 ---
 
 ![homepage](https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/a679f8e3c4cb792f94bcce2c6a3e42d8b05622c5/README%20img/homepage.png?raw=true)
 
-###Description:
+###DESCRIPTION:
 
 After signing up through Google OAuth 2.0, users answer survey questions about their lives: 
 ![survey] (https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/35f0cdbe2e32bcd13639d6bd3978b170852c4cd8/README%20img/survey.png?raw=true)
@@ -18,19 +21,22 @@ They can also search for individual .gifs from the Giphy API without logging in 
 
 ![instagif] (https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/master/README%20img/instagif.png?raw=true)
 
-###Technologies used:
+###TECHNOLOGIES USED:
 
 This is a full-stack app employing MongoDB, Node.js + Express, JavaScript, jQuery / AJAX / Promises, Google OAuth 2.0, Materialize, HTML, CSS and the Giphy API. Deployed via Heroku.
 
-###Code
+###CODE
 
 Our top challenges included:
 
-- sending data to and from our Mongo database and the Giphy API using a mix of AJAX and HTTP requests, and then populating that data onto the Results page timeline in the correct order. This required writing a Promise.all that gathers the asynchronous responses into one array so that they can then be sorted into the correct order again by their index property
+- sending data to and from our Mongo database and the Giphy API using a mix of AJAX and HTTP requests, and then populating that data onto the Results page timeline in the correct order. This required writing a Promise.all that gathers the asynchronous responses into one array so that they can then be sorted into the correct order again by their index property (see Promises snippet below)
 
 - generating unique, functional URLs that can be shared with non-logged-in users
 
 - styling our site symmetrically and responsively via Materialize
+
+#####Promises snippet:
+![Promises] (https://github.com/ztotta/the-gif-that-keeps-on-gifing/blob/master/README%20img/promises.png?raw=true)
 
 ###Yet to be resolved:
 Although we are pleased with the progression of our project and its functionality, there are just a few things that we would add if given more time, including a direct post-to-facebook button, a responsive footer on the timeline page, and improved responsiveness for mobile devices.
