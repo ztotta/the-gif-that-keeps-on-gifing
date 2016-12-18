@@ -28,6 +28,7 @@ They can also search for individual .gifs from the Giphy API without logging in 
 ###TECHNOLOGIES USED:
 
 This is a full-stack app employing MongoDB, Node.js + Express, JavaScript, jQuery / AJAX / Promises, Google OAuth 2.0, Materialize, HTML, CSS and the Giphy API. Deployed via Heroku.
+
 --
 
 ###CODE
@@ -46,6 +47,7 @@ Our top challenges included:
 
 ###Yet to be resolved:
 Although we are pleased with the progression of our project and its functionality, there are just a few things that we would add if given more time, including a direct post-to-facebook button, a responsive footer on the timeline page, and improved responsiveness for mobile devices.
+
 --
 
 ###Conclusion:
